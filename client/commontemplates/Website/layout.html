@@ -1,0 +1,22 @@
+<template name="layout">
+	<head>
+	<link rel="stylesheet" type="text/css"  href="/css/main.css">
+	<link rel="stylesheet" type="text/css"  href="/css/icomoon.css">	
+
+
+<link rel="stylesheet" type="text/css"  href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"  href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css">
+<script src="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/js/bootstrap.min.js"></script>
+<script src="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/js/jquery.js"></script>
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+   </head>
+	  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+	  	{{> header}}	
+	    <div style="min-height:1000px;">
+	  		{{> yield}}	 
+	  	</div>
+	  	{{> footer}}
+	  </body>
+</template>

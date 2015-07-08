@@ -1,0 +1,44 @@
+<template name="contentlist">
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Contents </h1><hr>			  
+        </div>
+</div>
+
+
+
+<div class="row centered">  
+<div class="pagina">
+	<div class="row white centered">	
+		
+		<dl class="dl-horizontal">
+				 {{#each contentsbysessionid}} 
+				 
+         			
+						 {{> contentItem}}
+						
+				 {{/each}} 
+				</dl>
+	</div>
+</div>
+</div>	  
+</template>
+
+
+<template name="contentItem">  
+    <dt> 			
+					
+					{{title}} 
+                    <br/>
+                    <a href={{path}}><button class="btn-info" >Download</button></a>
+
+					</dt>
+   					<dd>
+
+   					{{description}}</dd>
+    <br/>
+  
+
+
+</template>

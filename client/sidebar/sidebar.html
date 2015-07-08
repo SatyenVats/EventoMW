@@ -1,0 +1,32 @@
+<template name="sidebar">
+<div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       EVENT NAME
+                    </a>
+                </li>
+                <li>
+                    <a  class="side-bar-sessions">Sessions 
+                    <span class="label label-success label-as-badge"> {{ getsessionCount }}</span></a>
+                </li>
+                <li>
+                    <a href="#" class="side-bar-contents">Contents 
+                    <span class="label label-success label-as-badge">{{getcontentCount}}</span></a>
+                </li>
+                <li>
+                    <a href="#" class="side-bar-questions">Questions 
+                    <span class="label label-success label-as-badge">{{getquestionCount}}</span></a>
+                </li>
+                <li>
+                    <a href="#" class="side-bar-answers">Answers 
+                    <span class="label label-success label-as-badge">{{getanswerCount}}</span></a>
+                </li>
+                <li>
+                    <a href="#" class="side-bar-polls">Polls 
+                    <span class="label label-success label-as-badge">{{getpollCount}}</span></a>
+                </li>
+               
+            </ul>
+        </div>
+</template>

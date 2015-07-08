@@ -1,0 +1,30 @@
+<template name="questionlist">
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Questions ({{ questioncount}})</h1><hr>			  
+        </div>
+</div>
+
+<div class="row centered">  
+<div class="pagina">
+	<div class="row white centered">			
+				<br>
+				 {{#each  questionsbyeventid}} 
+						{{> questionItem}}
+				 {{/each}} 
+	</div>
+</div>
+</div>	  
+</template>
+
+
+<template name="questionItem">  
+       <div style="margin-left:300px;text-align:left;">			
+					<a id="questionbadge">{{title}}
+						<label class="label label-info label-as-badge" >Answers {{getanswersbyquestionid _id}}</label>
+						</a>
+					
+                       
+	   </div>          
+</template>

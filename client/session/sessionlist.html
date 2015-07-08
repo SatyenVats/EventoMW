@@ -1,0 +1,36 @@
+<template name="sessionlist">
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Sessions </h1><hr>			  
+        </div>
+</div>
+
+
+
+<div class="row centered">  
+<div class="pagina">
+	<div class="row white centered">			
+				<br>
+				 {{#each sessionsbyeventid}} 
+						 {{> sessionItem}}
+				 {{/each}} 
+	</div>
+</div>
+</div>	  
+
+
+</template>
+
+
+<template name="sessionItem">  
+       <div class="col-lg-3 centered">					
+					<h4><b><a href=""><img src="../img/session.png" width="90" height="30px" />{{title}}</a></b></h4>		
+					Start: 21/07/2015 9:00 AM <br/><!-- {{dateimeformat starttime}}	<br/>		 -->
+					End  : 21/07/2015 11:00 AM <br/><!-- {{dateimeformat endtime}} -->				
+					<p>{{description}}</p>
+					<span class="label label-warning label-as-badge" id="questionbadge">Questions {{getquestioncountbysessionid _id}}</span>
+					<span class="label label-info label-as-badge" id="contentbadge">Add Contents {{getcontentcountbysessionid _id}}</span>
+				</div>
+          
+</template>

@@ -1,0 +1,39 @@
+<template name="addevent">
+<div class="row white">
+	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Add Events </h1><hr>
+			  
+        </div>
+</div>
+	  
+{{> map}}
+ 	
+    {{#autoForm  collection="Events" id="eventForm"  type="insert"  }}
+		<div class="row white ">	
+ 			<fieldset>
+			<div class="col-md-3" >	
+				<div class="col-md-12" >	
+				  {{> afQuickField name='title'}}	
+				  {{> afQuickField name='description'}}	
+				  {{> afQuickField name='address' }}						 
+				</div>
+				<div class="col-md-6" ></div >
+				<div class="col-md-6" ></div>
+			</div>
+			<div class="col-md-3" >		
+				{{> afQuickField name='starttime' type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}	
+				{{> afQuickField name='endtime'   type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}
+			</div>
+			<div class="col-md-3">	
+				 {{> afQuickField name='speakers'}}  			
+			</div>
+			<div class="col-md-3">
+				 {{> afQuickField name='attendees'}}
+				 <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success" >Create Event</button></div>	
+			</div>	
+ 			</fieldset>
+		</div>
+    {{/autoForm}}
+</template>

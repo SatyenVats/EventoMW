@@ -1,0 +1,17 @@
+<template name="polllist">
+<div class="row white">
+	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Polls</h1><hr>
+			  
+			   {{#each polls}} 
+						 {{> pollItem}}
+				{{/each}} 
+        </div>
+</div>
+</template>
+
+<template name="pollItem">
+  {{title}}
+</template>

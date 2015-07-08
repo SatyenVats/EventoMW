@@ -1,0 +1,29 @@
+<template name="addquestion">
+<div id="wrapper">
+      {{> sidebar}}
+<div class="row white">	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Add Question </h1><hr>			  
+        </div>
+</div>
+{{#autoForm  collection="Questions" id="questionForm"  type="insert"  }}
+		<div class="row white ">	
+ 			<fieldset>
+ 				
+ 				
+            <div class="col-md-2" >	</div>
+			<div class="col-md-8" >	
+				    {{> afQuickField name='title'}}	
+				  {{> afQuickField name='description'}}	
+				  
+				   <div class="col-md-2" style="text-align:right;" > 
+				   <button type="submit" class="btn btn-lg btn-success" >Create Question</button>	
+				   </div>				
+			</div>
+ 			</fieldset> 
+		</div>
+		{{/autoForm}}
+		{{> questionlist}}
+		</div>
+</template>

@@ -1,0 +1,57 @@
+<template name="addpoll">
+<div id="wrapper">
+      {{> sidebar}}
+<div class="row white">
+	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Add Polls </h1><hr>
+			  
+        </div>
+</div>
+	  
+<!-- {{> map}} -->
+ 	
+    {{#autoForm  collection="Polls" id="pollForm"  type="insert"  }}
+		<div class="row white ">	
+ 			<fieldset>
+			<div class="col-md-3" ></div>	
+
+				<div class="col-md-6" >	
+				  {{> afQuickField name='title'}}
+				  <br/>
+                  <div class="col-md-6" >	
+                  {{> afQuickField name='optiona'}}
+				  
+				  {{> afQuickField name='optionc'}}
+				    {{> afQuickField name='optione'}}
+                  </div>
+
+                  <div class="col-md-6" >	
+                  {{> afQuickField name='optionb'}}
+                  {{> afQuickField name='optiond'}}
+				   <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success" >Create Poll</button></div>	
+                  </div>
+				  
+				
+
+				  
+				</div>
+				<div class="col-md-3" ></div>	
+			<!-- </div> -->
+			<!-- <div class="col-md-3" >		
+				{{> afQuickField name='starttime' type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}	
+				{{> afQuickField name='endtime'   type="bootstrap-datetimepicker" buttonClasses="glyphicon glyphicon-calendar"}}
+			</div>
+			<div class="col-md-3">	
+				 {{> afQuickField name='speakers'}}  			
+			</div>
+			<div class="col-md-3">
+				 {{> afQuickField name='attendees'}}
+				 <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success" >Create Event</button></div>	
+			</div>	 -->
+ 			</fieldset>
+		</div>
+    {{/autoForm}}
+    </div>
+</template>

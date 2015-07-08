@@ -1,0 +1,7 @@
+.tile{ height:100%; width:100%; float:left; margin:0 5px 0 0; padding:3px; padding-right: 3px; padding-left:3px; } 
+.tileLargo{ width:210px; }
+
+.amarelo{ background:#DAA520; } .vermelho{ background:#CD0000; } .azul{ background:#4682B4; }
+ .verde{ background-color: #2E8B57; }
+
+.pagina{   width: 90%;height: auto;margin-left: auto;margin-right: auto; } .linha{ width:auto; padding:5px; height:auto; display:table; }

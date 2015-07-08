@@ -1,0 +1,32 @@
+<template name="addanswers">
+<div class="row white">
+	
+		<br/>
+		<div class="col-md-12">
+			<h1 class="centered  eventimg">Add Answers </h1><hr>
+			  
+        </div>
+</div>
+	  
+     {{> questiontitle}}
+ 	
+    {{#autoForm  collection="QAnswers" id="qanswersForm" }}
+		<div class="row white ">	
+ 			<fieldset>
+ 			<div class="col-md-3" >	</div>
+			<div class="col-md-3" >	
+				<div class="col-md-12" >					 
+				  {{> afQuickField name='answer' class='answer'}}	
+				</div>				
+			</div>			
+			<div class="col-md-3">			
+				 <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success upload" >Create Content</button></div>
+			</div>	
+				<div class="col-md-3" >	</div>
+ 			</fieldset>
+		</div>
+    {{/autoForm}}
+    
+    {{> contentlist}}
+</template>
+
