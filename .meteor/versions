@@ -46,6 +46,7 @@ ejson@1.0.6
 email@1.0.6
 facebook@1.2.0
 fastclick@1.0.3
+fourseven:scss@2.1.1
 geojson-utils@1.0.3
 google@1.1.5
 gwendall:session-json@0.1.7
@@ -75,8 +76,9 @@ lookback:logger@1.1.1
 matb33:collection-hooks@0.7.13
 meteor@1.1.6
 meteor-platform@1.2.2
-meteorhacks:kadira@2.22.0
-meteorhacks:meteorx@1.3.1
+meteoric:ionic@0.1.17
+meteoric:ionic-sass@0.1.9
+meteoric:ionicons-sass@0.1.6
 meteortoys:toykit@0.8.1
 minifiers@1.1.5
 minimongo@1.0.8

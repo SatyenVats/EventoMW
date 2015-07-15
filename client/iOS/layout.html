@@ -1,0 +1,12 @@
+<template name="layout-ios">
+  <head>
+  </head>
+  <body>
+  {{#ionBody}}
+    {{> ionNavBar class="bar-positive"}}
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
+  {{/ionBody}}
+</body>
+</template>
