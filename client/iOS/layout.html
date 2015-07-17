@@ -5,7 +5,15 @@
   {{#ionBody}}
     {{> ionNavBar class="bar-positive"}}
     {{#ionNavView}}
-      {{> yield}}
+
+    {{#if currentUser}}
+      {{> dashboard}}
+  {{else}}
+      {{> register}}
+      {{> login}}
+  {{/if}}
+
+      <!-- {{> yield}} -->
     {{/ionNavView}}
   {{/ionBody}}
 </body>

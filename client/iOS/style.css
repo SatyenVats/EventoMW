@@ -7,7 +7,7 @@ body {
   height:0px;
   font-size: 14px;
   margin-top: 0px;
-  color:#2E64FE;
+  color:#2E9AFE;
 }
 .title1 {
   background-color: #FFFFFF;
@@ -89,6 +89,13 @@ p.small{
   text-align: left;
 }
 
+.tab_button_session{
+  background-color: #D8D8D8;
+  height: 36px;
+  text-align: center;
+}
+
+
 .right_arrow{
   margin-top: -20px;
   margin-left: 91%;
@@ -97,6 +104,10 @@ p.small{
 .grid_color{
   background-color: #FFFFFF;
   margin-top: -10px;
+  height: 300px;
+}
+.row_height{
+  height:150px;
 }
 
 @media (max-width:767px)
@@ -105,4 +116,32 @@ p.small{
    .navbar div.span3 { width:25%; margin-top: 8px;}
    .navbar div.span6 { width:50%; margin-top: -7px;}
    body {padding:0;}
+}
+
+.about_event{
+  height: 240px;
+  color: #FFFFFF;
+}
+p.content{
+  margin-top: 5px;
+  /*font-size: 14px;*/
+  color: #FFFFFF;
+  text-align: left;
+  /*line-height: 120%;*/
+}
+.session_row{
+  background-color: #FFFFFF;
+  height: 100px;
+  max-height: 100px;
+
+}
+p.session_title{
+  font-weight: bold;
+}
+p.session_text{
+  font-weight: normal;
+}
+.line{
+  height: 1px;
+  background-color: #F2F2F2;
 }

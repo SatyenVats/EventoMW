@@ -2,31 +2,45 @@
   <!-- {{#contentFor "headerTitle"}}
     <h1 class="title">Login</h1>
   {{/contentFor}} -->
-  {{#ionView}}
-    {{#ionContent}}
+  <!-- {{#ionView}}
+    {{#ionContent}} -->
 	   <div id="login" name="login" >
 
 			<div class="col-lg-12 col-sm-12 login_form">
          <form>
            <div>
-             <input id="name" type="text" maxlength="41" size="41" placeholder="Name" value="" />
+             <input type="email" name="loginEmail" maxlength="41" size="41" placeholder="Email" />
            </div>
            <div class="mobile_number">
-             <input id="mobile number" type="text" maxlength="41" size="41" placeholder="Mobile Number" value="" />
+             <input type="password" name="loginPassword" maxlength="41" size="41" placeholder="Mobile Number" />
            </div>
            <div class="submit_button">
-             <a href="/verificationNumber"><input type="image" src="img/next_button.png" alt="Submit" class="next"></a>
+						 <input type="submit" value="Login">
+             <!-- <a href="/verificationNumber"><input type="image" src="img/next_button.png" alt="Submit" class="next"></a> -->
            </div>
+
       <div class="top-margin">
         <p class="big">Please verify your mobile number </p>
         <p class="small">Evento will send a one time SMS to </p>
         <p class="small">verify your mobile number.</p>
 
       </div>
-        </form>
+			</form>
  			</div>
 
+
+
+
   </div>
-  {{/ionContent}}
- {{/ionView}}
+  <!-- {{/ionContent}}
+ {{/ionView}} -->
 </template>
+
+
+<!-- <template name="login">
+    <form>
+        <input type="email" name="loginEmail">
+        <input type="password" name="loginPassword">
+        <input type="submit" value="Login">
+    </form>
+</template> -->
