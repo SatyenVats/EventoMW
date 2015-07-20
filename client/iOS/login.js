@@ -3,6 +3,13 @@ Template.login.events({
         event.preventDefault();
         var emailVar = event.target.loginEmail.value;
         var passwordVar = event.target.loginPassword.value;
-      Meteor.loginWithPassword(emailVar, passwordVar);
+
+        var events = Events.findOne( { $and: [ {"speakers.email" :  { $all: [emailVar] }}, {"redeemnumber" :  { $all: [passwordVar ] }} ] });
+        if(events !== undefined)
+          {
+            // Router.go('login',{},{query:{}});
+               Router.go('userhome',{},{query:{EventId: events._id}});
+          }
+
     }
 });
