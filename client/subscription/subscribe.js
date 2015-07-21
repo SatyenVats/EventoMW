@@ -4,3 +4,4 @@ Meteor.subscribe("questions");
 Meteor.subscribe("contents");
 Meteor.subscribe("qanswers");
 Meteor.subscribe("polls");
+Meteor.subscribe("profiles");

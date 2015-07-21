@@ -1,26 +1,15 @@
 <template name="attendeesIos">
   <div class="container navbar title" style="width:100%;margin-bottom:0px;">
-
       <div class="span3 text-left"></div>
       <div class="span6 text-center"><h4>Attendees</h4></div>
-
   </div>
 
 
-       <div class="content-card-list">
-
+  <div class="content-card-list">
          {{#each attendeesbyeventid}}
              {{> attendIos}}
          {{/each}}
-
-
-
-
-
-    </div>
-
-
-
+  </div>
 </template>
 
 <template name="attendIos">

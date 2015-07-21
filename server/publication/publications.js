@@ -23,3 +23,7 @@ Meteor.publish('qanswers', function() {
 Meteor.publish('polls', function() {
   return Polls.find();
 });
+Meteor.publish('Profiles', function() {
+  return Polls.find();
+});
+
