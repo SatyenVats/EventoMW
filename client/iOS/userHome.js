@@ -11,6 +11,7 @@ Template.userhome.helpers({
 Template.userhome.events({
         'submit #eventsbtn': function(event) {
             event.preventDefault();
-              Router.go('eventIos');
+              //Router.go('eventIos');
+              Router.go('eventIos',{},{query:{EventId: eid._id}});
           }
         });
