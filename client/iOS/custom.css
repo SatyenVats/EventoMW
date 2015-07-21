@@ -231,13 +231,22 @@ overflow: hidden;
    
 }
 
-[ng\:cloak], [ng-cloak], .ng-cloak {
-  display: none !important;
-}
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
 }
 
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+.headertext
+{
+    color:#3DA1E4;font-weight:600;
+    padding: 13px;
+}
+.headerstyle{
+    width:100%;background-color:#F9F8F8;margin-bottom:0px;border-radius: 0px;
+}
 
