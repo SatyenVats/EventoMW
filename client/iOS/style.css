@@ -90,10 +90,11 @@ p.small{
 }
 
 .tab_button_session{
-  background-color: #D8D8D8;
+  background-color: #0088CC;
   height: 36px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 0px;
+  font: #FFFFFF;
 }
 
 

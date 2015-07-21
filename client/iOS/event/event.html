@@ -1,35 +1,20 @@
 <template name="eventIos">
-  <div class="container navbar title">
-
-      <div class="span3 text-left"><a href="/userHome"><input type="image" src="img/back_button_arrow.png" height="40" width="40"></a></div>
-      <div class="span6 text-center"><h3>Events</h3></div>
-
+  <div class="container navbar title headerstyle">
+ <div class="col-xs-12" style="padding:10px">
+   <span class="pull-left"> <a href="/userhome"><img  src="img/leftarrow.png" class="img-responsive" /></a></span>
+  <span class="headertext"> Evento </span>
+</div>
 
   </div>
-         <div class="about_event">
-           <div>
-             <div class="col-xs-6 text-left"> About Event </div>
-             <div class="col-xs-2 text-left"> <input type="image" src="img/content.png" height="40" width="40"> </div>
-             <div class="col-xs-2 text-left"> <input type="image" src="img/QandA.png" height="40" width="40"> </div>
-             <div class="col-xs-2 text-left"> <input type="image" src="img/poll.png" height="40" width="40"> </div>
+
+
+           <div class="tab_button_session ">
+             <span style="margin-top:15px;">Sessions</span>
            </div>
-           <!-- <div class="col-xs-12 text-left">
-             <p class="content">{{description}}</p>
-           </div> -->
 
-           {{#each geteventdetails}}
-  						 {{> eventDescription}}
-  				 {{/each}}
-
-         </div>
-         
-         <!--   <div class="tab_button_session ">
-             <a href="#">Sessions</a>
-           </div> -->
-
-           <!-- {{#each sessionsbyeventid}}
+           {{#each sessionsbyeventid}}
   						 {{> sessionListIos}}
-  				 {{/each}} -->
+  				 {{/each}}
 
 </template>
 
@@ -41,10 +26,4 @@
 
   </div>
   <div class="line"></div>
-</template>
-
-<template name="eventDescription">
-<div class="col-xs-12 text-left">
-  <p class="content">{{description}}</p>
-</div>
 </template>

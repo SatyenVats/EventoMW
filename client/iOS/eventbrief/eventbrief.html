@@ -4,7 +4,7 @@
    <span class="pull-left"> <a href="/userHome"><img  src="img/leftarrow.png" class="img-responsive" /></a></span>
   <span class="headertext"> Events </span>
 </div>
-      
+
   </div>
 
     <div class="col-md-12" style="background-color: #0088CC;padding:5px;color:#fff;">Event Brief</div>
@@ -13,20 +13,23 @@
 
 
        <div class="content-card-list">
-       
+
 
         <div class="row well1" style="cursor: pointer;">
 
-            
+
 
             <!--    <div class="row well1">-->
-            <div class="col-md-12" style="text-align:left">
-              <div style="margin-top: 15px;font-size:14px;font-weight:600;">ABC Event</div>
+            <!-- <div class="col-md-12" style="text-align:left">
+              <div style="margin-top: 15px;font-size:14px;font-weight:600;">{{title}}</div>
               <div>
-The Brindavana Gardens is a garden located in the state of Karnataka in India. It lies adjoining the Krishnarajasagara dam which is built across the river Kaveri.[1] The work on laying out this garden was started in the year 1927 and completed in 1932.[2][3] Visited by close to 2 million tourists per year, the garden is one of the major attractions of Srirangapatna
+                {{description}}
               </div>
-            </div>
-     
+            </div> -->
+            {{#each geteventbrief}}
+               {{> eventdtl}}
+             {{/each}}
+
         </div>
 
 
@@ -34,5 +37,15 @@ The Brindavana Gardens is a garden located in the state of Karnataka in India. I
     </div>
 
 
+
+</template>
+
+<template name="eventdtl">
+  <div class="col-md-12" style="text-align:left">
+    <div style="margin-top: 15px;font-size:14px;font-weight:600;">{{title}}</div>
+    <div>
+      {{description}}
+    </div>
+  </div>
 
 </template>
