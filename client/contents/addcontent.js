@@ -12,7 +12,7 @@ function   SaveCollection(e,fileobj) {
     // content1.fileextension= fileobj;
     // content1.filesize= fileobj;
     // content1.path= fileobj;
-    // content1.sessionid= Router.current().params.query.SessionId;   
+    // content1.sessionid= Router.current().params.query.SessionId;
 
 var content1 = {
     title:$('.title').val(),
@@ -23,7 +23,7 @@ var content1 = {
     sessionid:Router.current().params.query.SessionId,
     eventid:Router.current().params.query.EventId
 };
-   
+
    Contents.insert(content1, function insert(e){
 
    });
@@ -38,17 +38,17 @@ Template.addcontent.events({
                 path:"Evento"
             },function(err,r){
 
-                     if (err) 
-                     {           
+                     if (err)
+                     {
                          throw new Meteor.Error("Upload Error: " + err.reason);
-                     } 
-                     else {                        
-                         
+                     }
+                     else {
+
                           SaveCollection(e,r);
                      }
 
 
-               
+
                 console.log(r);
         });
     }

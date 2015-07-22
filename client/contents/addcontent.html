@@ -3,33 +3,33 @@
 <div id="wrapper">
       {{> sidebar}}
 <div class="row white">
-	
+
 		<br/>
 		<div class="col-md-12">
 			<h1 class="centered  eventimg">Add Content </h1><hr>
-			  
+
         </div>
 </div>
-	  
 
- 	
+
+
     {{#autoForm  collection="Contents" id="contentForm" }}
-		<div class="row white ">	
+		<div class="row white ">
  			<fieldset>
  			<div class="col-md-3" >	</div>
-			<div class="col-md-3" >	
-				<div class="col-md-12" >	
-				  {{> afQuickField name='title' class='title'}}	
-				  {{> afQuickField name='description' class='description'}}		
-				  <input type="file" class="file_bag">  	
+			<div class="col-md-3" >
+				<div class="col-md-12" >
+				  {{> afQuickField name='title' class='title'}}
+				  {{> afQuickField name='description' class='description'}}
+				  <input type="file" class="file_bag">
 				  {{#each files}}
 			        <p>{{percent_uploaded}}</p>
-			    {{/each}}		 				 
-				</div>				
-			</div>			
-			<div class="col-md-3">			
+			    {{/each}}
+				</div>
+			</div>
+			<div class="col-md-3">
 				 <div style="text-align:center;"><button type="submit" class="btn btn-lg btn-success upload" >Create Content</button></div>
-			</div>	
+			</div>
 				<div class="col-md-3" >	</div>
  			</fieldset>
 		</div>
@@ -37,4 +37,3 @@
     {{> contentlist}}
     </div>
 </template>
-
