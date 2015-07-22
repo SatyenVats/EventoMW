@@ -250,3 +250,9 @@ overflow: hidden;
     width:100%;background-color:#F9F8F8;margin-bottom:0px;border-radius: 0px;
 }
 
+.btn-color {
+  margin-left: 10px;
+  background-color: #fff;
+  color: #4d8bda;
+  font-weight: 600;
+}
