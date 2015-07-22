@@ -4,3 +4,10 @@ attendeesbyeventid: function(){
      return	Sessions.find({eventid:eid});//{eventid:eid}
 }
 });
+
+
+Template.attendeesIos.events({
+    'click #gotoback': function(){
+        window.history.back();
+    }
+});

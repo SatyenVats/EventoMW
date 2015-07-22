@@ -5,3 +5,10 @@ geteventbrief: function () {
 
       }
       });
+
+
+Template.eventbrief.events({
+    'click #gotoback': function(){
+        window.history.back();
+    }
+});
