@@ -1,12 +1,9 @@
- Template.speakersios.helpers({
-    getspeakersbyeventid: function (id) {
+Template.speakersios.helpers({
+ getspeakersbyeventid: function () {
+       var eid=Router.current().params.query.EventId;
+      return Events.find({_id:eid});
 
-      var eid=Router.current().params.query.EventId;
-  	  return Events.findOne({_id:eid}).attendees.length;
-
-
-
-   }
+       }
 });
 
 Template.speakersios.events({

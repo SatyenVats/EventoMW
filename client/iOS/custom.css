@@ -158,11 +158,11 @@ border-color: #1D5D9D;
 color: #ffffff;
     text-decoration: underline;
     background-color:#1D5D9D;
-   
+
 }
 
 .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
- background-color: none; 
+ background-color: none;
 }
 .navbar-inverse .navbar-toggle {
 border: none;
@@ -186,7 +186,7 @@ font-weight: bold;
 }
 
 .location1{
-   
+
 color: #4a46b0;
 display: block;
 font-weight: bold;
@@ -220,7 +220,7 @@ overflow: hidden;
   border: 1px solid #d3d1d1;
   padding: 20px;
   border-radius: 4px;
- 
+
 }
 
 
@@ -228,7 +228,7 @@ overflow: hidden;
     width: 20px;
     height: 20px;
     background-image: url(../images/plus-4.png);
-   
+
 }
 
 .vcenter {
@@ -262,7 +262,7 @@ overflow: hidden;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 45px;
+  height: 65px;
   background-color: #F9F9F9;
 }
 

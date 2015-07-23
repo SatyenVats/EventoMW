@@ -1,12 +1,12 @@
-Template.questionanswerios.helpers({
- getspeakersbyeventid: function () {
+Template.pollios.helpers({
+ getspollbyeventid: function () {
        var eid=Router.current().params.query.EventId;
       return Events.find({_id:eid});
 
        }
 });
 
-Template.questionanswerios.events({
+Template.pollios.events({
     'click #gotoback': function(){
         window.history.back();
     }
