@@ -262,6 +262,36 @@ overflow: hidden;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 35px;
+  height: 45px;
   background-color: #F9F9F9;
+}
+
+.bttn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.bttn:focus, .bttn:active:focus, .bttn.active:focus {
+    outline: 0 none;
+}
+
+
+.bttn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.bttn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.bttn-primary.outline:hover, .bttn-primary.outline:focus, .bttn-primary.outline:active, .bttn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.bttn-primary.outline:active, .bttn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
 }
