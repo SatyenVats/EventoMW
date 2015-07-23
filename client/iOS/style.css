@@ -1,6 +1,7 @@
 body {
   background-color: #ffffff;
   text-align: center;
+  /*height: 100%;*/
 }
 .title {
   background-color: #FAFAFA;
@@ -13,7 +14,7 @@ body {
   background-color: #FFFFFF;
   height:50px;
   font-size: 13px;
-  margin-top: 0px;
+  margin-top: 5px;
 }
 input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
   -webkit-appearance: none; -moz-appearance: none;
@@ -43,12 +44,16 @@ input[type=text], input[type=url], input[type=email], input[type=password], inpu
     /*display: inline-block;*/
     text-align: center;
 }
+
+#loginscreen{
+  background-color: #0088CC;
+  height: 700px;
+  min-height: 100%;
+}
 .login_form{
   margin-top:150px;
 }
-#login{
-  background-color: #0088CC;
-}
+
 .mobile_number{
   margin-top: 5px;
 }
