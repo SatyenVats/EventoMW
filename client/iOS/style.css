@@ -140,6 +140,7 @@ p.content{
   /*line-height: 120%;*/
 }
 .session_row{
+  margin-top: 5px;
   background-color: #FFFFFF;
   height: 100px;
   max-height: 100px;
