@@ -295,3 +295,11 @@ overflow: hidden;
     color: #007299;
     box-shadow: none;
 }
+
+::-webkit-input-placeholder {
+   color: white;
+   text-align:left;
+   padding-left: 10px;
+}
+
+
