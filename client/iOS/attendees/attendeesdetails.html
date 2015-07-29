@@ -1,22 +1,20 @@
-<template name="speakersios">
+<template name="attendeesdetails">
   <div class="container navbar title headerstyle">
     <div class="col-xs-12" style="padding:14px; margin-top:2px;">
       <span class="pull-left"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
-      <span class="headertext"> Speakers </span>
+      <span class="headertext"> Details </span>
     </div>
 
   </div>
 
 
 
-  {{#each getspeakersbyeventid}}
-     {{> spkr}}
+  {{#each getattendeesdetails}}
+     {{> attenddetails}}
    {{/each}}
 </template>
 
-<template name="spkr">
-  <div class="row " >
-  <div class="col-xs-12 ">
+<template name="attenddetails">
   <div class="content-card-list" style="background-color:#fff;">
    <div class="row well1" style="cursor: pointer;padding:0px">
        <!--    <div class="row well1">-->
@@ -33,11 +31,9 @@
        </div>
    </div>
    <div class="col-md-12" style="background-color:#fff;margin-top:20px;text-align:left">
-   A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.
+   {{details}}
    </div>
 
-</div>
-</div>
 </div>
   <footer class="footer">
    <div class="container">

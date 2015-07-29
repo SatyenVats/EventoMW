@@ -1,13 +1,13 @@
-Template.userhome.helpers({
- getuserdetails: function () {
+Template.userdata.helpers({
+ geteventdetails: function () {
        var eid=Router.current().params.query.EventId;
-  	   //return Events.find({_id:eid});
-       return Events.findOne({_id:eid}).speakers;
+  	   return Events.find({_id:eid});
+
        }
 });
 
 
-Template.userhome.events({
+Template.userdata.events({
         'submit #eventsbtn': function(event) {
             event.preventDefault();
               //Router.go('eventIos');
