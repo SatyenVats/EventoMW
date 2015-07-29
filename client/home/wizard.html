@@ -17,7 +17,7 @@
 					<div class="navbar">
 						<div class="navbar-inner">
 							<div class="container">
-								<ul>
+								<ul class="tabs">
 									<li><a href="#tab1" data-toggle="tab">Event Info</a></li>
 									<li><a href="#tab2" data-toggle="tab">Venue Details</a></li>		
 									<li><a href="#tab3" data-toggle="tab">Add Speakers</a></li>
@@ -40,7 +40,7 @@
 
 
 					<div class="tab-content">
-						<div class="tab-pane" id="tab1">
+						<div class="tab-pane active" id="tab1">
 							{{> step1}}
 						</div>
 						<div class="tab-pane active" id="tab2">						
@@ -48,18 +48,18 @@
 
 
 						</div>		
-						<div class="tab-pane" id="tab3">
+						<div class="tab-pane active" id="tab3">
 							{{> addspeakers}}
 							<br/>
 						</div>
-						<div class="tab-pane" id="tab4">
+						<div class="tab-pane active" id="tab4">
 							{{> addattendees}}
 							<br/>
 						</div>
-						<div class="tab-pane" id="tab5">
+						<div class="tab-pane active" id="tab5">
 							{{> addesession}}
 						</div>
-						<div class="tab-pane" id="tab6">					
+						<div class="tab-pane active" id="tab6">					
 
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
@@ -70,7 +70,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="tab-pane" id="tab7">
+						<div class="tab-pane active" id="tab7">
 							{{> summaryhome}}
 						</div>
 
