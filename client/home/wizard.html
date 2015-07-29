@@ -1,0 +1,95 @@
+<template name="wizard">
+
+
+	<div class="row white" >
+		<br/>
+		<div class="col-md-12" style="text-align:center;">
+			<h1 class="eventimg">Add Events </h1><hr>
+		</div>
+	</div>
+
+
+	<div class="row white ">
+		<fieldset>
+			<div class="col-md-6 col-md-offset-3" >
+
+				<div id="rootwizard">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<ul>
+									<li><a href="#tab1" data-toggle="tab">Event Info</a></li>
+									<li><a href="#tab2" data-toggle="tab">Venue Details</a></li>		
+									<li><a href="#tab3" data-toggle="tab">Add Speakers</a></li>
+									<li><a href="#tab4" data-toggle="tab">Add Attendees</a></li>
+									<li><a href="#tab5" data-toggle="tab">Add Sessions</a></li>
+									<li><a href="#tab6" data-toggle="tab">App Code</a></li>
+									<li><a href="#tab7" data-toggle="tab">Summary</a></li>
+								</ul>
+							</div>	
+						</div>
+
+
+
+					</div>
+
+
+					<div id="bar" class="progress progress-striped active" style="height:4px;">
+						<div class="progress-bar" style="background-color: orange;"></div>
+					</div>
+
+
+					<div class="tab-content">
+						<div class="tab-pane" id="tab1">
+							{{> step1}}
+						</div>
+						<div class="tab-pane active" id="tab2">						
+						  {{> glocation}} 
+
+
+						</div>		
+						<div class="tab-pane" id="tab3">
+							{{> addspeakers}}
+							<br/>
+						</div>
+						<div class="tab-pane" id="tab4">
+							{{> addattendees}}
+							<br/>
+						</div>
+						<div class="tab-pane" id="tab5">
+							{{> addesession}}
+						</div>
+						<div class="tab-pane" id="tab6">					
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="email">App Code:</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="redeemcode" placeholder="App code" >
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane" id="tab7">
+							{{> summaryhome}}
+						</div>
+
+						<ul class="pager wizard">
+							<li class="previous first" style="display:none;"><a href="#">First</a></li>
+							<li class="previous"><a href="#">Previous</a></li>
+							<li class="next last" style="display:none;"><a href="#">Last</a></li>
+							<li class="next" id="wizardnext"><a href="#">Next</a></li>
+						</ul>
+					</div>	
+				</div>
+
+
+			</div>
+
+		</fieldset>
+	</div>
+
+
+
+
+</template>

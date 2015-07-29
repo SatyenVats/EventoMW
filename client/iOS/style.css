@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #ffffff;
   text-align: center;
   /*height: 100%;*/
@@ -36,13 +36,10 @@ input[type=text], input[type=url], input[type=email], input[type=password], inpu
   width: 19%; height: 45px;
 }
 .login_background{
-    /*background-image: url('img/SplashScreen1.png');*/
+  
     background-color: #0088CC;
     background-size: cover;
-    /*background-repeat:no-repeat;*/
-    /*width: 100%;
-    height: auto;*/
-    /*display: inline-block;*/
+   
     text-align: center;
 }
 
@@ -123,7 +120,7 @@ p.small{
 
 @media (max-width:767px)
 {
-   .navbar div[class*="span"] { float: left;} /* float left */
+   .navbar div[class*="span"] { float: left;} 
    .navbar div.span3 { width:25%; margin-top: 8px;}
    .navbar div.span6 { width:50%; margin-top: -7px;}
    body {padding:0;}
@@ -135,10 +132,10 @@ p.small{
 }
 p.content{
   margin-top: 5px;
-  /*font-size: 14px;*/
+  
   color: #FFFFFF;
   text-align: left;
-  /*line-height: 120%;*/
+ 
 }
 .session_row{
   margin-top: 5px;
@@ -157,3 +154,4 @@ p.session_text{
   height: 1px;
   background-color: #F2F2F2;
 }
+*/

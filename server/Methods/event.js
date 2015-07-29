@@ -9,6 +9,39 @@ Meteor.methods({
 
             
           
+  },
+
+ addsessionspeaker :function(eventid,currentsession,fname){ 
+  	   var doc = Events.findOne({_id:eventid}).eSession;
+  	   for(i=0;i<doc.length;i++)
+        {
+        	if(doc[i].title==currentsession)
+        	{
+    			 var test= Events.update(
+                               {_id:eventid,"eSession.title" : currentsession},
+                               { $addToSet :{"eSession.$.speakers":fname[0]}});  
+                            
+            }
   }
+},
+
+ addsessionattendee :function(eventid,currentsession,fname){
+  	
+
+  	   var doc = Events.findOne({_id:eventid}).eSession;
+  	   for(i=0;i<doc.length;i++)
+        {
+        	if(doc[i].title==currentsession)
+        	{
+    			 var test= Events.update(
+                               {_id:eventid,"eSession.title" : currentsession},
+                               { $addToSet :{"eSession.$.attendees":fname[0]}});  
+                               
+            }
+  }
+}
+
+
+
 });
 

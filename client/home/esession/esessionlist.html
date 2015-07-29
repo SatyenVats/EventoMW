@@ -1,0 +1,30 @@
+<template name="esessionlist">
+
+  <div class="col-md-12" >
+    <div class="form-group">
+     <div class="col-xs-12">
+       <button type="button" class="btn btn-success btn-block" id="btnaddspk">
+        <span class="glyphicon "></span> 
+        Sessions {{getsessioncount}}
+      </button> 
+    </div>
+  </div>
+</div>
+
+
+<div  class="form-group">
+
+ {{#each getsessions}} 
+ {{> esessionsinfo}}
+ {{/each}}
+
+</div>
+</template>
+
+
+<template name="standardLegends">
+    <img class="img-circle" style="max-height: 80px;" height="30" width="30" src={{profilepath}} />
+    <span style="color: {{color}}; background-color: {{bg}};"></span> {{fname}}
+</template>
+
+
