@@ -35,7 +35,7 @@
        var doc = Events.findOne({_id:Session.get('eventid')}).eSession;
 	       if(attendees!==undefined)
 	       {                   		
-	 		Meteor.call('addsessionspeaker',Session.get('eventid'),currentsession,fname,function(err, response) {});
+	 		Meteor.call('addsessionattendee',Session.get('eventid'),currentsession,fname,function(err, response) {});
 	       } 
        }
      

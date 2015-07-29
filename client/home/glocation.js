@@ -16,12 +16,18 @@ Template.glocation.rendered = function () {
         }
     });
 
-var mapOptions = {
-   zoom: 9, 
-   mapTypeId: google.maps.MapTypeId.ROADMAP
-}
+    $(".tab-pane").css({'visibility':'hidden'  , 'position':'absolute'});
+    $("ul.tabs li:first").addClass("active").show(); 
+    $(".tab-pane:first").css({'visibility':'visible' , 'position':'static'}); 
 
-var map = new google.maps.Map(document.getElementById('us3'), mapOptions);
-google.maps.event.trigger(map, 'resize');
+    //On Click Event
+    $("ul.tabs li").click(function() {
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active"); 
+        $(".tab-pane").css({'visibility':'hidden' , 'position':'absolute'}); 
+        var activeTab = $(this).find("a").attr("href"); 
+        $(activeTab).css({'visibility':'visible'  , 'position':'static'});
+        return false;
+    });
 
 }
