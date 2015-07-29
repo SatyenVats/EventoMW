@@ -20,7 +20,7 @@ Template.wizard.rendered = function () {
  //          }
  //        });
 
- $('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});  
+ //$('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});  
 
  $('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
 

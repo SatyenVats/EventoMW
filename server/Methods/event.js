@@ -1,4 +1,20 @@
 Meteor.methods({
+
+
+
+  sendEmail: function (subject,text,to) {
+   // check([text], [String]);
+
+   // this.unblock();
+
+    Email.send({
+      to: to,
+      from: 'subbiahmca@gmail.com',
+      subject: subject,
+      text: text
+    });
+  },
+
   addEvent: function(doc) {     
             Logger.info('Object before Insert : ');
             Logger.info('Method: ' +JSON.stringify(doc));          	
