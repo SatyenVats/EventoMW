@@ -44,7 +44,7 @@ Template.wizard.rendered = function () {
 
 
          }
-         if(index==6) { 
+         if(index==7) { 
 
           var redeemcode=$('#redeemcode').val();
           var evt= Events.update(Session.get('eventid'), 
