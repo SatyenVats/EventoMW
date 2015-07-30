@@ -4,41 +4,18 @@
       <span class="pull-left"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
       <span class="headertext"> Speakers </span>
     </div>
-
   </div>
 
+  <div id="myCarousel" class="carousel slide" data-interval="false">
+    <div class="carousel-inner">
+        {{#each getspeakersbyeventid}}
+           {{> spkr}}
+         {{/each}}
+    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
 
-
-  {{#each getspeakersbyeventid}}
-     {{> spkr}}
-   {{/each}}
-</template>
-
-<template name="spkr">
-  <div class="row " >
-  <div class="col-xs-12 ">
-  <div class="content-card-list" style="background-color:#fff;">
-   <div class="row well1" style="cursor: pointer;padding:0px">
-       <!--    <div class="row well1">-->
-       <div class="col-md-12" style="background-color:#0088CC;padding:40px">
-           <div>
-               <img class="img-circle" style="max-height: 80px;" src="{{profilepath}}" />
-           </div>
-           <h4 style="color:#fff;font-weight:bold;line-height: 0.1;">
-               {{fname}} {{lname}} | Speaker
-           </h4>
-           <div style="color:#fff">
-               {{email}}
-           </div>
-       </div>
-   </div>
-   <div class="col-md-12" style="background-color:#fff;margin-top:20px;text-align:left">
-   A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.
-   </div>
-
-</div>
-</div>
-</div>
   <footer class="footer">
    <div class="container">
 
@@ -60,4 +37,38 @@
 
    </div>
   </footer>
+</template>
+
+
+
+<template name="spkr">
+
+
+  <div class="item  {{isActive index}}">
+    <div class="row " >
+        <div class="col-xs-12 ">
+          <div class="content-card-list" style="background-color:#fff;">
+      <div class="row well1" style="cursor: pointer;padding:0px">
+         <div class="col-md-12" style="background-color:#0088CC;padding:40px">
+             <div>
+                 <img class="img-circle" style="max-height: 80px;" src="{{value.profilepath}}" />
+             </div>
+             <h4 style="color:#fff;font-weight:bold;line-height: 0.1;">
+                 {{value.fname}} {{value.lname}} | Speaker
+             </h4>
+             <div style="color:#fff">
+                 {{value.email}}
+             </div>
+         </div>
+      </div>
+      <div class="col-md-12" style="background-color:#fff;margin-top:20px;text-align:left">
+      A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.A user profile is a visual display of personal data associated with a specific user, or a customized desktop environment. A profile refers therefore to the explicit digital representation of a person's identity. A user profile can also be considered as the computer representation of a user model.
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+
+
 </template>
