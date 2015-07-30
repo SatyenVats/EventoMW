@@ -16,18 +16,18 @@ Template.glocation.rendered = function () {
         }
     });
 
-    $(".tab-pane").css({'visibility':'hidden'  , 'position':'absolute'});
-    $("ul.tabs li:first").addClass("active").show(); 
-    $(".tab-pane:first").css({'visibility':'visible' , 'position':'static'}); 
+    // $(".tab-pane").css({'visibility':'hidden'  , 'position':'absolute'});
+    // $("ul.tabs li:first").addClass("active").show(); 
+    // $(".tab-pane:first").css({'visibility':'visible' , 'position':'static'}); 
 
-    //On Click Event
-    $("ul.tabs li").click(function() {
-        $("ul.tabs li").removeClass("active");
-        $(this).addClass("active"); 
-        $(".tab-pane").css({'visibility':'hidden' , 'position':'absolute'}); 
-        var activeTab = $(this).find("a").attr("href"); 
-        $(activeTab).css({'visibility':'visible'  , 'position':'static'});
-        return false;
-    });
+    // //On Click Event
+    // $("ul.tabs li").click(function() {
+    //     $("ul.tabs li").removeClass("active");
+    //     $(this).addClass("active"); 
+    //     $(".tab-pane").css({'visibility':'hidden' , 'position':'absolute'}); 
+    //     var activeTab = $(this).find("a").attr("href"); 
+    //     $(activeTab).css({'visibility':'visible'  , 'position':'static'});
+    //     return false;
+    // });
 
 }
