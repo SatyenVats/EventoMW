@@ -1,3 +1,4 @@
+
 .steps ul, .steps li {
 	margin: 0;
 	padding: 0;
@@ -39,7 +40,8 @@ margin: 0; padding: 0;
 background: #fff }
 .bwizard-steps .active {
     color: #fff;
-    background: #007ACC }
+    background: #007ACC 
+}
 .bwizard-steps .active:after {
     border-left-color: #007ACC }
 .bwizard-steps .active a {

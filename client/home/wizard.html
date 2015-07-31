@@ -18,13 +18,14 @@
 						<div class="navbar-inner">
 							<div class="container">
 								<ul class="tabs">
-									<li><a href="#tab1" data-toggle="tab">Event Info</a></li>
-									<li><a href="#tab2" data-toggle="tab">Venue Details</a></li>		
-									<li><a href="#tab3" data-toggle="tab">Add Speakers</a></li>
-									<li><a href="#tab4" data-toggle="tab">Add Attendees</a></li>
-									<li><a href="#tab5" data-toggle="tab">Add Sessions</a></li>
-									<li><a href="#tab6" data-toggle="tab">App Code</a></li>
-									<li><a href="#tab7" data-toggle="tab">Summary</a></li>
+									<li><a href="#tab1" data-toggle="tab">Event </a></li>
+									<li><a href="#tab2" data-toggle="tab">Venue </a></li>		
+									<li><a href="#tab3" data-toggle="tab">Speakers</a></li>
+									<li><a href="#tab4" data-toggle="tab">Attendees</a></li>
+									<li><a href="#tab5" data-toggle="tab">Contents</a></li>
+									<li><a href="#tab6" data-toggle="tab">Sessions</a></li>
+									<li><a href="#tab7" data-toggle="tab">AppCode</a></li>
+									<li><a href="#tab8" data-toggle="tab">Summary</a></li>
 								</ul>
 							</div>	
 						</div>
@@ -57,9 +58,13 @@
 							<br/>
 						</div>
 						<div class="tab-pane active" id="tab5">
+							<!-- {{> addeventcontents}} -->
+							<br/>
+						</div>
+						<div class="tab-pane active" id="tab6">
 							{{> addesession}}
 						</div>
-						<div class="tab-pane active" id="tab6">					
+						<div class="tab-pane active" id="tab7">					
 
 							<form class="form-horizontal" role="form">
 								<div class="form-group">
@@ -70,7 +75,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="tab-pane active" id="tab7">
+						<div class="tab-pane active" id="tab8">
 							{{> summaryhome}}
 						</div>
 
