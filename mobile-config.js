@@ -1,3 +1,5 @@
+App.accessRule('http://s3-ap-southeast-1.amazonaws.com/*');
+
 // // This section sets up some basic app metadata,
 // // the entire section is optional.
 // App.info({
