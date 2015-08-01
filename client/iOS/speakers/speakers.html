@@ -1,5 +1,5 @@
 <template name="speakersios">
-  <div class="container navbar title headerstyle">
+  <div class="container navbar title headerstyle navbar-fixed-top">
     <div class="col-xs-12" style="padding:14px; margin-top:2px;">
       <a href="#">
         <span class="pull-left"> <img  src="img/back_arrow4.png" style="width:20px" class="img-responsive" id="gotoback" /></span></a>
@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div id="myCarousel" class="carousel slide" data-interval="false">
+  <div id="myCarousel" class="carousel slide" data-interval="false" style="padding-bottom:55px; padding-top:50px;">
     <div class="carousel-inner">
         {{#each getspeakersbyeventid}}
            {{> spkr}}

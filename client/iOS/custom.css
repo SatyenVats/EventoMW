@@ -258,7 +258,7 @@ overflow: hidden;
   font-weight: 600;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -313,4 +313,9 @@ overflow: hidden;
 
 .inner {
   height: calc(100% + 1px);
+}
+
+.carousel-control
+{
+  opacity: 0.1 !important;
 }

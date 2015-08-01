@@ -1,12 +1,12 @@
 <template name="sessionlistios">
-  <div class="container navbar title headerstyle">
+  <div class="container navbar title headerstyle navbar-fixed-top">
  <div class="col-xs-12" style="padding:14px; margin-top:2px;">
    <span class="pull-left"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
   <span class="headertext"> Evento </span>
 </div>
 
   </div>
-<div class="col-md-12" style="background-color: #0088CC;padding:5px;color:#fff;">Sessions</div>
+<div class="col-md-12" style="background-color: #0088CC;padding:5px;color:#fff; padding-top:50px;">Sessions</div>
 
            {{#each sessionsbyeventid}}
   						 {{> sessionListIos2}}
@@ -19,7 +19,7 @@
 </template>
 
 <template name="sessionListIos2">
-  <div class="row">
+  <div class="row" style="padding-bottom:55px;">
     <div class="col-xs-12" style="padding:5px;">
 
     <div class="col-xs-2 text-left"><input type="image" src="img/clock.png" height="50" width="38"></div>
