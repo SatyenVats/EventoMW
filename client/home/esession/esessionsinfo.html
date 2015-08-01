@@ -1,0 +1,116 @@
+<template name="esessionsinfo">
+  <div class="row well1" style="cursor: pointer;">  
+   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
+     <div style="color:#446D8E">{{title}}
+       <span class="pull-right"><img class="displayed addspkatnpopup"  src="img/arrowright.png" style="height:30px" id={{title}}  /></span>
+     </div>
+   </div>
+ </div>
+
+
+
+ <div class="modal fade in" id="sessionspeakersttendeeaddmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Add Speaker / Attendees</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="row text-center">
+
+          <div class="col-md-6 col-sm-6" >
+
+            <div class="col-md-12 col-sm-12" >
+             Speakers
+           </div>
+
+
+           <div class="col-md-12 col-sm-12" >
+             <div class="col-md-9 col-sm-9" >
+              {{> inputAutocomplete settings=settings  id="inputspeaker" class="input-xlarge form-control" placeholder="Name.."}}  
+            </div>
+
+            <div class="col-md-3 col-sm-3" >
+              <button type="button" class="btn btn-info btn-default" id="btnaddsessionspk"><span class="glyphicon glyphicon-plus"></span></button>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12" >
+           {{#each getspeakersinsessions}}
+           {{> speakeritems}}
+           {{/each}}
+         </div>
+
+
+       </div>
+
+       <div class="col-md-6 col-sm-6" >
+         <div class="col-md-12 col-sm-12" >
+           Attendees
+         </div>
+
+         <div class="col-md-12 col-sm-12" >
+           <div class="col-md-9 col-sm-9" >
+             {{> inputAutocomplete settings=getattendees id="inputattendees" class="input-xlarge form-control" placeholder="Name.."}}  
+           </div>
+
+           <div class="col-md-3 col-sm-3" >
+            <button type="button" class="btn btn-info btn-default" id="btnaddsessionatn"><span class="glyphicon glyphicon-plus"></span></button>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12" >
+         {{#each getattendeesinsessions}}
+         {{> attendeeitems}}
+         {{/each}}
+
+       </div>
+       
+     </div>
+
+
+
+
+
+
+
+   </div>
+
+ </div>
+
+
+</div>
+</div>
+</div>
+</template>
+
+
+<template name="speakeritems">
+  <div class="row well1" style="cursor: pointer;">
+   <!--    <div class="row well1">-->
+   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
+     <div style="color:#446D8E">{{this}}
+       <span class="pull-right"><img class="displayed addspkatnpopup"  src="img/arrowright.png" style="height:30px" id={{this}}  />
+        
+      </span>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="attendeeitems">
+  <div class="row well1" style="cursor: pointer;">
+   <!--    <div class="row well1">-->
+   <div class="col-md-12" style="margin-top: 10px;margin-bottom: 10px;">
+     <div style="color:#446D8E">{{this}}
+       <span class="pull-right"><img class="displayed addspkatnpopup"  src="img/arrowright.png" style="height:30px" id={{this}}  />
+      
+      </span>
+    </div>
+  </div>
+</div>
+</template>

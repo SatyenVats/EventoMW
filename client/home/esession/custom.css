@@ -1,0 +1,16 @@
+.well1 {
+padding: 5px;
+min-height: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+background-color: #fff;
+border: 1px #EFF0F0;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+.location-picker .dropdown-menu.picker {height:300px; width:300px; display:block; visibility: hidden;}
+  .location-picker .open .dropdown-menu.picker {visibility:visible}

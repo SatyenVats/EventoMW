@@ -206,7 +206,7 @@ white-space: -moz-pre-wrap;
     height: 30px;
 }
 
-.person-job-title {
+/*.person-job-title {
 font-size: .8em;
 margin: 5px 0 0 5px;
 font-weight: 400;
@@ -215,7 +215,7 @@ word-break: break-word;
 word-wrap: break-word;
 white-space: nowrap;
 overflow: hidden;
-}
+}*/
 .wrapper1 {
   border: 1px solid #d3d1d1;
   padding: 20px;
@@ -267,11 +267,12 @@ overflow: hidden;
 }
 
 .bttn {
-    padding: 14px 24px;
+    padding: 0px 0px;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-size: 10px;
 }
 .bttn:focus, .bttn:active:focus, .bttn.active:focus {
     outline: 0 none;
@@ -280,7 +281,7 @@ overflow: hidden;
 
 .bttn.outline {
     background: none;
-    padding: 12px 22px;
+    padding: 10px 20px;
 }
 .bttn-primary.outline {
     border: 2px solid #0099cc;
@@ -301,5 +302,15 @@ overflow: hidden;
    text-align:left;
    padding-left: 10px;
 }
+.outer {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
+  height: 370px;
 
+  /* More properties for a fixed height ... */
+}
+
+.inner {
+  height: calc(100% + 1px);
+}

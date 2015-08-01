@@ -1,0 +1,56 @@
+<template name="attendeelist">
+<!-- <div class="col-md-12" >
+
+
+<div class="form-group">
+   <div class="col-sm-12">
+   <button type="button" class="btn btn-success btn-xs" id="btnaddspk">
+<span class="glyphicon "></span> 
+       Attendees {{getattendeecount}}
+        </button> 
+   </div>
+   </div>
+
+
+
+       </div> -->
+
+         <div class="col-md-12" >
+    <div class="form-group">
+     <div class="col-xs-12">
+       <button type="button" class="btn btn-success btn-block" id="btnaddspk">
+        <span class="glyphicon "></span> 
+        Attendees {{getattendeecount}}
+      </button> 
+    </div>
+  </div>
+</div>
+
+
+ <ul>
+   
+   {{#each getattendees}} 
+     {{> attendeeinfo}}
+  {{/each}}
+
+  </ul>
+</template>
+
+<template name="attendeeinfo">
+   <li>      
+     <button class="delete">&times;</button>
+      
+
+      <div class="col-md-12" >
+           <div>
+               <img class="img-circle" style="max-height: 80px;" height="60" width="60" src={{profilepath}} />
+               {{fname}} {{lname}} | {{email}}
+           </div>
+
+           <!-- <button type="button" class="btn btn-success btn-xs" id="btnaddspk">Edit </button> -->
+          
+       </div>
+
+   </li>
+   <br/>
+</template>

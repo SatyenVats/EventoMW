@@ -1,0 +1,21 @@
+<template name="speakersinsession">
+ <div  class="form-group">
+   {{#each getsessionspeakers}} 
+   {{> getsessionspeakerinfo}}
+   {{/each}}
+ </div>
+</template>
+
+
+<template name="getsessionspeakerinfo">
+ <div class="row well1" style="cursor: pointer;">
+   <!--    <div class="row well1">-->
+   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
+     <div style="color:#446D8E">{{title}}
+       <span class="pull-right"><img class="displayed addspkatnpopup"  src="img/arrowright.png" style="height:30px" id={{fname}}  />
+        {{fname}} {{name}}
+      </span>
+    </div>
+  </div>
+</div>
+</template>

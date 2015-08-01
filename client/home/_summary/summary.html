@@ -1,0 +1,81 @@
+<template name="summaryhome">
+	{{#each getEvent}}
+		{{> summary}}
+	{{/each}}
+
+</template>
+
+<template name="summary">
+	<div class="row white" >
+		<br/>
+		<div class="col-md-12" style="text-align:center;">
+			<h1 class="eventimg">Summary </h1><hr>
+		</div>
+	</div>
+
+
+	<div class="row white ">
+		<fieldset>			
+			<div class="form-horizontal form-group" style="width: 550px">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Event:</label>
+					<div class="col-sm-5">
+						<h4>{{title}}</h4>
+					</div>
+				</div>	
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Description</label>
+					<div class="col-sm-5">
+						{{description}}
+					</div>
+				</div>	
+
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Address</label>
+					<div class="col-sm-5">
+						<h4>{{venuename}}</h4>
+						{{address}}
+					</div>
+				</div>	
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Duration</label>
+					<div class="col-sm-5">
+												{{formatDate starttime}} --- {{formatDate endtime}}
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Sessions</label>
+					<div class="col-sm-5">
+						 Sessions [{{getsessioncount}}]
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-5">
+						Speakers [{{getspeakerscount}}] / Attendees  [{{getattendeescount}}] 
+					</div>
+				</div>
+
+                <div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-5">
+						<button type="button" class="btn btn-success btn-xs" id="btnspkemail">Send An Invitation to all the Speakers</button>
+						
+					</div>
+					<div class="col-sm-5">
+					<button type="button" class="btn btn-warning btn-xs" id="btnatnemail">Send An Invitation to all the Attendees</button>
+					</div>
+				</div>
+
+
+			</div>
+		</fieldset>
+	</div>
+
+
+</template>

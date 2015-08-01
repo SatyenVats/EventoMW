@@ -2,8 +2,8 @@ Template.attendeesios.helpers({
 attendeesbyeventid: function(){
  var eid=Router.current().params.query.EventId;
 
- //return Events.find({eventid:eid}).fetch().attendees;
-     return	Sessions.find({eventid:eid});//{eventid:eid}
+ return	Events.findOne({_id:eid}).attendees;//{eventid:eid}
+     //return	Sessions.find({eventid:eid});//{eventid:eid}
 }
 });
 

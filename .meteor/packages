@@ -14,6 +14,7 @@ accounts-facebook
 mizzao:bootstrap-3
 aldeed:simple-schema
 aldeed:collection2
+
 iron:router
 sacha:spin
 ian:accounts-ui-bootstrap-3
@@ -23,7 +24,7 @@ tsega:bootstrap3-datetimepicker@=3.1.3_3
 aldeed:autoform-bs-datetimepicker
 mrt:moment-timezone
 twbs:bootstrap
-dburles:google-maps
+
 
 lookback:logger
 nimble:restivus
@@ -33,7 +34,6 @@ cfs:standard-packages
 matb33:collection-hooks
 msavin:mongol
 lepozepo:s3
-fourseven:scss@2.0.0
-meteoric:ionic-sass
-meteoric:ionicons-sass
-meteoric:ionic
+mizzao:autocomplete
+email
+blaze
