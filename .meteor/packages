@@ -11,7 +11,6 @@ aldeed:collection2
 
 iron:router
 sacha:spin
-ian:accounts-ui-bootstrap-3
 aldeed:autoform-bs-datepicker
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datetimepicker

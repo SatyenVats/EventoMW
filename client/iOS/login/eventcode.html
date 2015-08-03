@@ -1,6 +1,6 @@
   <template name="eventcode">
 
-    {{#contentFor "headerButtonLeft"}}
+    <!-- {{#contentFor "headerButtonLeft"}}
     <button class="button button-clear pull-left button-positive" data-ion-modal="search">
       {{> ionIcon icon='ios-search'}}
     </button>
@@ -14,30 +14,38 @@
 
     {{#contentFor "headerTitle"}}
     <h1 class="title">Evento</h1>
-    {{/contentFor}}
+    {{/contentFor}} -->
 
-    {{#ionView}}
+    {{#ionView hide-nav-bar="true"}}
     {{#ionContent}}
 
-    <div class="login_form">
+    <div class="padding text-center">
       <form>
-        <div class="mobile_number">
-         <input type="text" name="eventcode" placeholder="Event Code" />
-       </div>
-       <div class="submit_button">
-         <input type="submit" value="Validate Code" class="btn-block btn-default outline">
-       </div>
 
-       <div class="top-margin">
-        <div style="color:#ffffff;font-size:16px">Please verify your mobile number </div>
-        <div style="color:#ffffff;font-size:12px">Evento will send a one time SMS to </div>
-        <div style="color:#ffffff;font-size:12px">verify your mobile number.</div>
+        <div class="list">
 
-      </div>
-    </form>
-  </div>
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input name="eventcode" type="text" placeholder="Event Code">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-positive">
+              Validate Event Code
+            </button>
+          </div>
+        </div>
 
-  {{/ionContent}}
-  {{/ionView}}
+        <div>
+          <div>Please verify your mobile number </div>
+          <div>Evento will send a one time SMS to </div>
+          <div>verify your mobile number.</div>
+        </div>
 
-</template>
+      </form>
+    </div>
+
+    {{/ionContent}}
+    {{/ionView}}
+
+  </template>

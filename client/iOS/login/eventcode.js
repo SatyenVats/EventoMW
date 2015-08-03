@@ -1,4 +1,4 @@
-Template.ioniclogin.events({
+Template.eventcode.events({
   'submit form': function(event) {
     event.preventDefault();
     var eventcode = event.target.eventcode.value;
@@ -7,12 +7,13 @@ Template.ioniclogin.events({
         "redeemnumber": eventcode
     });
   if (events !== undefined) {
+    Session.set('selectedEvent', events);
     Router.go('userhome', {}, {
       query: {
         EventId: events._id
       }
     });
   }
-  // satyen: handle else
+  // @todo: handle ELSE
 }
 });
