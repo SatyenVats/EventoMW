@@ -1,0 +1,9 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-container > .row {
+  flex: 1;
+}
