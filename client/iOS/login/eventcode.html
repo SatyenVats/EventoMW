@@ -1,0 +1,43 @@
+  <template name="eventcode">
+
+    {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+      {{> ionIcon icon='ios-search'}}
+    </button>
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+      {{> ionIcon icon='ios-plus-empty'}}
+    </button>
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Evento</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+    {{#ionContent}}
+
+    <div class="login_form">
+      <form>
+        <div class="mobile_number">
+         <input type="text" name="eventcode" placeholder="Event Code" />
+       </div>
+       <div class="submit_button">
+         <input type="submit" value="Validate Code" class="btn-block btn-default outline">
+       </div>
+
+       <div class="top-margin">
+        <div style="color:#ffffff;font-size:16px">Please verify your mobile number </div>
+        <div style="color:#ffffff;font-size:12px">Evento will send a one time SMS to </div>
+        <div style="color:#ffffff;font-size:12px">verify your mobile number.</div>
+
+      </div>
+    </form>
+  </div>
+
+  {{/ionContent}}
+  {{/ionView}}
+
+</template>
