@@ -1,21 +1,8 @@
 <template name="layout-ios">
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=1">
-  </head>
-  <body>
-  <!-- {{#ionBody}}
+  {{#ionBody}}
     {{> ionNavBar class="bar-positive"}}
-    {{#ionNavView}} -->
-
-    <!-- {{#if currentUser}}
-      {{> userHome}}
-      {{> dashboard}}
-  {{else}}
-      {{> login}}
-  {{/if}} -->
-
-       {{> yield}}
-    <!-- {{/ionNavView}}
-  {{/ionBody}} -->
-</body>
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
+  {{/ionBody}}
 </template>
