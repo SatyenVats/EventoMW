@@ -1,70 +1,57 @@
-<template name="sessionlistios">
-  <div class="container navbar title headerstyle navbar-fixed-top">
- <div class="col-xs-12" style="padding:14px; margin-top:2px;">
-   <span class="pull-left"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
-  <span class="headertext"> Evento </span>
-</div>
+  <template name="sessionlistios">
 
+  <div class="bar bar-header">
+   <button class="button icon-left ion-chevron-left button-clear button-dark"></button>
+   <h1 class="title">Evento</h1>
+   <button class="button"></button>
   </div>
-<div class="col-md-12" style="background-color: #0088CC;padding:5px;color:#fff; padding-top:50px;">Sessions</div>
 
-           {{#each sessionsbyeventid}}
-  						 {{> sessionListIos2}}
-  				 {{/each}}
+    {{#ionView hide-nav-bar="true"}}
+    {{#ionContent}}
+
+    <!-- <div class="col-md-12" style="background-color: #0088CC;padding:5px;color:#fff; padding-top:50px;">Sessions</div> -->
+
+               {{#each sessionsbyeventid}}
+      						 {{> sessionListIos2}}
+      				 {{/each}}
+
+               <div class="tabs tabs-icon-top">
+                 <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
+                   <i class="icon ion-home"></i>
+                   Event Brief
+                 </a>
+                 <a class="tab-item" href="/contentios?EventId={{currenteventid}}">
+                   <i class="icon ion-star"></i>
+                   Content
+                 </a>
+                 <a class="tab-item">
+                   <i class="icon ion-gear-a"></i>
+
+                 </a>
+                 <a class="tab-item" href="/questionanswerios?EventId={{_id}}">
+                   <i class="icon ion-gear-a"></i>
+                   Q & A
+                 </a>
+                 <a class="tab-item" href="/pollios?EventId={{_id}}">
+                   <i class="icon ion-gear-a"></i>
+                   Poll
+                 </a>
+               </div>
 
 
+               {{/ionContent}}
+               {{/ionView}}
+  </template>
 
+  <template name="sessionListIos2">
+      <div class="list">
 
-
-</template>
-
-<template name="sessionListIos2">
-  <div class="row" style="padding-bottom:55px;">
-    <div class="col-xs-12" style="padding:5px;">
-
-    <div class="col-xs-2 text-left"><input type="image" src="img/clock.png" height="50" width="38"></div>
-    <div class="col-xs-10 text-left"><p class="session_title">{{title}} </p>
-      <p class="session_text">{{description}}</p>
+      <a class="item item-avatar" href="#">
+        <img src="img/clock.png">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+      </a>
       </div>
-    </div>
-  </div>
-  <div class="line"></div>
-  {{#each eventid}}
-      {{> geteventid}}
-  {{/each}}
-</template>
-
-<template name="geteventid">
-  <footer class="footer">
-    <div class="container">
-
-  <div class="col-xs-12" >
 
 
-    <div class="col-xs-2" style="margin-top:2px;margin-left:0px;"><a href="/eventbrief?EventId={{_id}}"><input type="image" src="img/Event_Brief.png"></a><div style="color:#B1B1B1;font-size:8px">Event Brief</div></div>
-    <div class="col-xs-3" style="margin-top:2px"><a href="/contentios?EventId={{_id}}"><input type="image" src="img/contnt.png"></a><div style="color:#B1B1B1;font-size:8px">Content</div></div>
-    <div class="col-xs-2"><a href="#"><input type="image" src="img/Home_E.png"></a></div>
-    <div class="col-xs-3" style="margin-top:2px"><a href="/questionanswerios?EventId={{_id}}"><input type="image" src="img/Q & A.png"></a><div style="color:#B1B1B1;font-size:8px">Q & A</div></div>
-    <div class="col-xs-2" style="margin-top:2px"><a href="/pollios?EventId={{_id}}"><input type="image" src="img/Green_Star.png"></a><div style="color:#B1B1B1;font-size:8px">poll</div></div>
-
-
-  </div>
-
-
-
-    </div>
-  </footer>
-</template>
-
-
-<!--
->>>>>>> 781bbbb2018e94a78e667e35f8888765f94753c1
-<template name="sessionlist_ios">
-   <div class="session_row">
-    <div class="col-xs-2 text-left"><input type="image" src="img/clock.png" height="50" width="38"></div>
-    <div class="col-xs-10 text-left"><p class="session_title">{{title}} </p>
-      <p class="session_text">{{description}}</p></div>
-
-  </div>
-  <div class="line"></div>
-</template> -->
+  </template>

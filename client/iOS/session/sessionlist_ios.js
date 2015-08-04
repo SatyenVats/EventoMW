@@ -4,11 +4,11 @@ sessionsbyeventid: function(){
 
      return	Events.findOne({_id:eid}).eSession;//{eventid:eid}
 },
-geteventid:function () {
+currenteventid: function(){
+return Router.current().params.query.EventId;
 
-  var eid2=Router.current().params.query.EventId;
-  return	eid;
-  //return Events.find({_id:eid2});
+
+
 }
 });
 
