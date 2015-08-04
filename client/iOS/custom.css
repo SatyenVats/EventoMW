@@ -319,3 +319,8 @@ overflow: hidden;
 {
   opacity: 0.1 !important;
 }
+
+.wrapping-list .item-content, .wrapping-list .item {
+    overflow: initial;
+    white-space: initial;
+}
