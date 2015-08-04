@@ -7,3 +7,7 @@
 .home-container > .row {
   flex: 1;
 }
+
+.wrap {
+  white-space: normal;
+}
