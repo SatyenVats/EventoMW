@@ -1,6 +1,6 @@
   <template name="eventcode">
 
-    <!-- {{#contentFor "headerButtonLeft"}}
+   <!--  {{#contentFor "headerButtonLeft"}}
     <button class="button button-clear pull-left button-positive" data-ion-modal="search">
       {{> ionIcon icon='ios-search'}}
     </button>
@@ -10,40 +10,35 @@
     <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
       {{> ionIcon icon='ios-plus-empty'}}
     </button>
-    {{/contentFor}}
+    {{/contentFor}} -->
 
     {{#contentFor "headerTitle"}}
     <h1 class="title">Evento</h1>
-    {{/contentFor}} -->
+    {{/contentFor}}
 
-    {{#ionView hide-nav-bar="true"}}
-    {{#ionContent}}
+    {{#ionView}}
+    {{#ionContent class="center"}}
 
-    <div class="padding text-center">
-      <form>
-
-        <div class="list">
-
-          <div class="item item-input-inset">
-            <label class="item-input-wrapper">
-              <input name="eventcode" type="text" placeholder="Event Code">
-            </label>
-          </div>
-          <div class="padding">
-            <button class="button button-positive">
-              Validate Event Code
-            </button>
-          </div>
+    <form class="text-center">
+      <div class="list">
+        <label class="item item-input">
+          <input name="email" type="text" placeholder="Email Id">
+        </label>
+        <label class="item item-input">
+          <input name="eventcode" type="text" placeholder="Event Code">
+        </label>
+        <div class="padding">
+          <button class="button button-balanced">
+            Validate Event Code
+          </button>
         </div>
-
-        <div>
-          <div>Please verify your mobile number </div>
-          <div>Evento will send a one time SMS to </div>
-          <div>verify your mobile number.</div>
-        </div>
-
-      </form>
-    </div>
+      </div>
+      <div>
+        <div>Please verify your EMAIL-ID</div>
+        <div>and EVENT CODE received from</div>
+        <div>EVENTO Admin.</div>
+      </div>
+    </form>
 
     {{/ionContent}}
     {{/ionView}}

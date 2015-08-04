@@ -1,0 +1,13 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-container > .row {
+  flex: 1;
+}
+
+.wrap {
+  white-space: normal;
+}
