@@ -1,0 +1,9 @@
+p.wrap {
+  white-space: normal;
+}
+p.textleft{
+  text-align: left;
+}
+h2.textleft{
+  text-align: left;
+}
