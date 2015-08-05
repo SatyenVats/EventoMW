@@ -4,6 +4,9 @@ geteventbrief: function () {
       //return Events.findOne({_id:eid}).attendees;//{eventid:eid}
       return Events.find({_id:eid});
 
+      },
+      currenteventid: function(){
+        return Router.current().params.query.EventId;
       }
       });
 

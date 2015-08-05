@@ -13,6 +13,9 @@ getattendeesdetails: function () {
       //db.myCollection.find( { $where: "attendees.email" } );
       //return Events.find({_id:eid});
 
+      },
+      currenteventid: function(){
+        return Router.current().params.query.EventId;
       }
       });
 

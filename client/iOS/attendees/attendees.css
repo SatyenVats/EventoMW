@@ -9,3 +9,14 @@ h2.textleft{
 p.textleft{
   text-align: left;
 }
+
+.avatar-circle .avatar-image{
+  border-radius: 50%;
+}
+
+.profile-header{
+  background: #27272B url("img/backgroundimage.png") center center repeat !important;
+  background-size: cover;
+  text-align: center;
+  padding: 24px;
+}

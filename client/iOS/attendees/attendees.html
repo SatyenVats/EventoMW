@@ -25,11 +25,9 @@
   {{#ionView}}
   {{#ionContent}}
 
-
-
-         {{#each attendeesbyeventid}}
-             {{> attendIos}}
-         {{/each}}
+    {{#each attendeesbyeventid}}
+      {{> attendIos}}
+    {{/each}}
 
          <div class="tabs tabs-icon-top">
            <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
@@ -54,8 +52,8 @@
            </a>
          </div>
 
-         {{/ionContent}}
-         {{/ionView}}
+    {{/ionContent}}
+    {{/ionView}}
 
 </template>
 
