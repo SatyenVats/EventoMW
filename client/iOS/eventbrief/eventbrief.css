@@ -1,10 +1,12 @@
 .eventbrief-title {
   text-align:left;
-  padding-left:20px;
+  padding-left:10px;
   padding-top: 10px;
+
 }
 
 .eventbrief-description{
   text-align:left;
-  padding-left:20px;
+  padding-left:10px;
+  padding-right: 10px;
 }

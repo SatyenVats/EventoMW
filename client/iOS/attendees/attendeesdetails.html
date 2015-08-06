@@ -31,6 +31,14 @@
      {{> attenddetails}}
    {{/each}}
 
+
+
+   {{/ionContent}}
+   <!-- {{> ionTab title="Event Brief" path="trending" iconOff="ios-bolt-outline" iconOn="ios-bolt" class="tab-item-positive"}}
+   {{> ionTab title="Content" path="recent" iconOff="ios-clock-outline" iconOn="ios-clock" class="tab-item-positive"}}
+   {{> ionTab title="" path="notifications" iconOff="ios-bell-outline" iconOn="ios-bell" class="tab-item-positive"}}
+   {{> ionTab title="Q & A" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}
+   {{> ionTab title="Poll" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}} -->
    <div class="tabs tabs-icon-top">
      <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
        <i class="icon ion-gear-a"></i>
@@ -40,7 +48,7 @@
        <i class="icon ion-star"></i>
        Content
      </a>
-     <a class="tab-item">
+     <a class="tab-item" href="/userhome?EventId={{currenteventid}}">
        <i class="icon ion-home"></i>
 
      </a>
@@ -53,12 +61,11 @@
        Poll
      </a>
    </div>
-
-   {{/ionContent}}
    {{/ionView}}
 </template>
 
 <template name="attenddetails">
+
   <div class="profile-header">
     <!-- {{> avatar user=this size="large" shape="circle"}} -->
     <div class="avatar avatar-large avatar-circle avatar-hide-initials">
@@ -71,37 +78,9 @@
     </p>
   </div>
 
-  <div class="item item-body">
-    <!-- <img class="full-image" src="img/backgroundimage.png"> -->
-    <p>
+    <p class="attendees-des">
       {{details}}
     </p>
 
-  </div>
-
-
-
-
-
-  <!-- <div class="content-card-list" style="background-color:#fff; padding-bottom:55px; padding-top:50px;">
-   <div class="row well1" style="cursor: pointer;padding:0px">
-
-       <div class="col-md-12" style="background-image: url('img/backgroundimage.png');img-responsive;padding:40px">
-           <div>
-               <img class="img-circle" style="max-height: 80px;" src="{{profilepath}}" />
-           </div>
-           <h4 style="color:#fff;font-weight:bold;line-height: 0.1;">
-               {{fname}} {{lname}}
-           </h4>
-           <div style="color:#fff">
-               {{email}}
-           </div>
-       </div>
-   </div>
-   <div class="col-md-12" style="background-color:#fff;margin-top:20px;text-align:left">
-   {{details}}
-   </div>
-
-</div> -->
 
 </template>

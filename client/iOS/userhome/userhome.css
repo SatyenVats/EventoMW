@@ -16,3 +16,10 @@ p.wrap {
   display:inline-block;
   position:relative;
 }
+
+.profile-header{
+  background: #27272B url("img/backgroundimage.png") center center repeat !important;
+  background-size: cover;
+  text-align: center;
+  padding: 24px;
+}

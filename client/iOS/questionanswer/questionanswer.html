@@ -1,100 +1,93 @@
 <template name="questionanswerios">
+  <!-- {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}} -->
 
- <div class="container navbar title headerstyle navbar-fixed-top">
+  {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    <!-- {{> ionIcon icon='ios-search'}} -->
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}}
 
-  <div class="col-xs-12" style="padding:14px; margin-top:2px;">
-   <span class="pull-left" style="margin-top:5px"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
-   <span class="headertext"> Q & A </span>
-  </div>
+  <!-- {{#contentFor "headerButtonRight"}}
+  <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+    {{> ionIcon icon='ios-plus-empty'}}
+  </button>
+  {{/contentFor}} -->
 
- </div>
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Question & Answers</h1>
+  {{/contentFor}}
 
- <div class="content-card-list" style="padding-bottom:55px; padding-top:50px;">
+  {{#ionView}}
+  {{#ionContent}}
 
-  <div class="col-md-12" style="background-color:#fff;padding:6px">
 
+
+
+  <!-- <div class="col-md-12" style="background-color:#fff;padding:6px">
    <input type="text" class="form-control" name="search" style="text-align:center;background-color:#E4E4E6;border-radius:4px" placeholder="Search">
+  </div> -->
 
+  <!-- <div class="row well1" style="cursor: pointer;">
 
-  </div>
-
-  <div class="row well1" style="cursor: pointer;">
-
-
-
-   <!--    <div class="row well1">-->
    <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
     <div style="color:#446D8E">George Miller
 
      <span class="pull-right"><a href="/qadetailsios?EventId={{_id}}"><img class="displayed"  src="img/right-arrow-q.png" style="height:30px" /></a></span>
     </div>
    </div>
-  </div>
-
-  <div class="row well1" style="cursor: pointer;">
-   <!--    <div class="row well1">-->
-
-   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-    <div style="color:#446D8E">Bradern Miller
-
-     <span class="pull-right"><img class="displayed" src="img/right-arrow-q.png" style="height:30px"/></span>
-    </div>
-   </div>
-  </div>
+  </div> -->
 
 
-  <div class="row well1" style="cursor: pointer;">
-   <!--    <div class="row well1">-->
-
-
-
-   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-    <div style="color:#446D8E">XYZ Content
-
-     <span class="pull-right"><img class="displayed" src="img/right-arrow-q.png" style="height:30px"/></span>
-    </div>
-   </div>
-  </div>
-
-
-
-  <div class="row well1" style="cursor: pointer;">
-   <!--    <div class="row well1">-->
-
-   <div class="col-md-12" style="text-align:left;margin-top:10px;margin-bottom:10px;">
-    <div style="color:#446D8E">XYZ Content
-
-     <span class="pull-right"><img class="displayed" src="img/right-arrow-q.png" style="height:30px"/></span>
-    </div>
-   </div>
-  </div>
-
- </div>
 
  {{#each getspeakersbyeventid}}
     {{> qandans}}
   {{/each}}
+  {{/ionContent}}
+
+  <div class="tabs tabs-icon-top">
+    <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
+      <i class="icon ion-gear-a"></i>
+      Event Brief
+    </a>
+    <a class="tab-item" href="/contentios?EventId={{currenteventid}}">
+      <i class="icon ion-star"></i>
+      Content
+    </a>
+    <a class="tab-item" href="/userhome?EventId={{currenteventid}}">
+      <i class="icon ion-home"></i>
+
+    </a>
+    <a class="tab-item" href="/questionanswerios?EventId={{currenteventid}}">
+      <i class="icon ion-gear-a"></i>
+      Q & A
+    </a>
+    <a class="tab-item" href="/pollios?EventId={{currenteventid}}">
+      <i class="icon ion-gear-a"></i>
+      Poll
+    </a>
+  </div>
+  {{/ionView}}
 
 </template>
 
 <template name="qandans">
-  <footer class="footer">
-    <div class="container">
-
-  <div class="col-xs-12" >
-
-
-    <div class="col-xs-3" style="margin-top:5px;margin-left:0px;"><a href="/eventbrief?EventId={{_id}}"><input type="image" src="img/Event_Brief.png"></a><div style="color:#B1B1B1;font-size:8px">Event Brief</div></div>
-    <div class="col-xs-2" style="margin-top:5px"><a href="/contentios?EventId={{_id}}"><input type="image" src="img/contnt.png"></a><div style="color:#B1B1B1;font-size:8px">Content</div></div>
-    <div class="col-xs-2"><a href="#"><input type="image" src="img/Home_E.png"></a></div>
-    <div class="col-xs-2" style="margin-top:5px"><a href="/questionanswerios?EventId={{_id}}"><input type="image" src="img/Q & A.png"></a><div style="color:#B1B1B1;font-size:8px">Q & A</div></div>
-    <div class="col-xs-3" style="margin-top:5px"><a href="/pollios?EventId={{_id}}"><input type="image" src="img/Green_Star.png"></a><div style="color:#B1B1B1;font-size:8px">poll</div></div>
-
-
-  </div>
-
-
-
-    </div>
-  </footer>
+  <ul class="list">
+    <li class="item">
+      Question1
+    </li>
+    <li class="item">
+      Question2
+    </li>
+    <li class="item">
+      Question3
+    </li>
+    <li class="item">
+      Question4
+    </li>
+</ul>
 </template>
