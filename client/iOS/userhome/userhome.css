@@ -11,3 +11,8 @@
 p.wrap {
   white-space: normal;
 }
+.grid-align{
+  text-align: center;
+  display:inline-block;
+  position:relative;
+}

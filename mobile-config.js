@@ -1,6 +1,6 @@
 App.accessRule('http://s3-ap-southeast-1.amazonaws.com/*');
-App.setPreference('StatusBarOverlaysWebView', 'false');
-App.setPreference('StatusBarBackgroundColor', '#000000');
+//App.setPreference('StatusBarOverlaysWebView', 'false');
+//App.setPreference('StatusBarBackgroundColor', '#000000');
 
 // // This section sets up some basic app metadata,
 // // the entire section is optional.
