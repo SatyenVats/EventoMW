@@ -77,17 +77,27 @@
 
 <template name="qandans">
   <ul class="list">
-    <li class="item">
+    <a href="/qadetailsios?EventId={{_id}}"><li class="item">
       Question1
-    </li>
+      {{> ionIcon icon="ios-arrow-forward" class="positive item-icon-right"}}
+    </li></a>
+    <a href="/qadetailsios?EventId={{_id}}">
     <li class="item">
       Question2
+      {{> ionIcon icon="ios-arrow-forward" class="positive item-icon-right"}}
     </li>
+    </a>
+    <a href="/qadetailsios?EventId={{_id}}">
     <li class="item">
       Question3
+      {{> ionIcon icon="ios-arrow-forward" class="positive item-icon-right"}}
     </li>
+    </a>
+    <a href="/qadetailsios?EventId={{_id}}">
     <li class="item">
       Question4
+      {{> ionIcon icon="ios-arrow-forward" class="positive item-icon-right"}}
     </li>
+    </a>
 </ul>
 </template>
