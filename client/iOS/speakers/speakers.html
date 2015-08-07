@@ -1,52 +1,88 @@
 <template name="speakersios">
-  <div class="container navbar title headerstyle navbar-fixed-top">
-    <div class="col-xs-12" style="padding:14px; margin-top:2px;">
-      <a href="#">
-        <span class="pull-left"> <img  src="img/back_arrow4.png" style="width:20px" class="img-responsive" id="gotoback" /></span></a>
-      <span class="headertext"> Speakers </span>
+  {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}}
 
+  <!-- {{#contentFor "headerButtonRight"}}
+  <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+    {{> ionIcon icon='ios-plus-empty'}}
+  </button>
+  {{/contentFor}} -->
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Speakers</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
+
+  {{#ionSlideBox}}
+    <!-- {{#ionSlide class="light-bg"}} -->
+    {{#each getspeakersbyeventid}}
+         {{> spkr}}
+       {{/each}}
+
+    <!-- {{/ionSlide}} -->
+     <!-- {{#ionSlide class="light-bg"}}
+      <h3>Slide 2</h3>
+    {{/ionSlide}}
+    {{#ionSlide class="light-bg"}}
+      <h3>Slide 3</h3>
+    {{/ionSlide}} -->
+  {{/ionSlideBox}}
+
+  {{/ionContent}}
+    <div class="tabs tabs-icon-top">
+      <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
+        <i class="icon ion-gear-a"></i>
+             Event Brief
+      </a>
+      <a class="tab-item" href="/contentios?EventId={{currenteventid}}">
+        <i class="icon ion-star"></i>
+             Content
+      </a>
+      <a class="tab-item" href="/userhome?EventId={{currenteventid}}">
+        <i class="icon ion-home"></i>
+
+      </a>
+      <a class="tab-item" href="/questionanswerios?EventId={{currenteventid}}">
+        <i class="icon ion-gear-a"></i>
+          Q & A
+      </a>
+      <a class="tab-item" href="/pollios?EventId={{currenteventid}}">
+        <i class="icon ion-gear-a"></i>
+             Poll
+      </a>
     </div>
-  </div>
+  {{/ionView}}
 
-  <div id="myCarousel" class="carousel slide" data-interval="false" style="padding-bottom:55px; padding-top:50px;">
-    <div class="carousel-inner">
-        {{#each getspeakersbyeventid}}
-           {{> spkr}}
-         {{/each}}
+</template>
+
+<template name="spkr">
+  {{#ionSlide class="light-bg"}}
+  <div class="profile-header">
+    <div class="avatar avatar-large avatar-circle avatar-hide-initials">
+      <img class="avatar-image" src="{{value.profilepath}}" width="80" height="80">
     </div>
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+    <h3>{{value.fname}} {{value.lname}}</h3>
+    <p>
+        {{value.email}}
+    </p>
   </div>
 
-  <footer class="footer">
-   <div class="container">
-
-  <div class="col-xs-12">
-
-
-  <!-- <div class="col-xs-1" style="margin-top:5px"></div> -->
-  <!-- <div class="col-xs-3" style="margin-top:5px;margin-left:0px;"><a href="/eventbrief?EventId={{_id}}"><input type="image" src="img/Event_Brief.png"></a><div style="color:#B1B1B1;font-size:8px">Event Brief</div></div>
-  <div class="col-xs-2" style="margin-top:5px"><a href="/contentios?EventId={{_id}}"><input type="image" src="img/contnt.png"></a><div style="color:#B1B1B1;font-size:8px">Content</div></div> -->
-  <div class="col-xs-12"><a href="#"><input type="image" src="img/Home_E.png"></a></div>
-  <!-- <div class="col-xs-2" style="margin-top:5px"><a href="/questionanswerios?EventId={{_id}}"><input type="image" src="img/Q & A.png"></a><div style="color:#B1B1B1;font-size:8px">Q & A</div></div>
-  <div class="col-xs-3" style="margin-top:5px"><a href="/pollios?EventId={{_id}}"><input type="image" src="img/Green_Star.png"></a><div style="color:#B1B1B1;font-size:8px">poll</div></div> -->
-  <!-- <div class="col-xs-1"></div> -->
-
-
-  </div>
-
-
-
-   </div>
-  </footer>
+    <p class="attendees-des">
+      {{value.details}}
+    </p>
+  {{/ionSlide}}
 </template>
 
 
 
-<template name="spkr">
 
-
-  <div class="item  {{isActive index}}">
+  <!-- <div class="item  {{isActive index}}">
     <div class="row " >
         <div class="col-xs-12 ">
           <div class="content-card-list" style="background-color:#fff;">
@@ -69,8 +105,4 @@
       </div>
       </div>
       </div>
-    </div>
-
-
-
-</template>
+    </div> -->

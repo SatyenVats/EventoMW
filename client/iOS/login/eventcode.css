@@ -37,3 +37,8 @@
 	-ms-flex-align: center;
 	align-items: center;
 }
+
+.info {
+	font-family: lato; 
+	font-weight: bold;
+}

@@ -1,3 +1,11 @@
+Template.speakersios.rendered = function() {
+  IonSideMenu.snapper.disable();
+};
+
+Template.speakersios.destroyed = function() {
+  IonSideMenu.snapper.enable();
+};
+
 Template.speakersios.helpers({
  getspeakersbyeventid: function () {
        var eid=Router.current().params.query.EventId;
@@ -8,6 +16,12 @@ Template.speakersios.helpers({
       return _.map(Events.findOne({_id:eid}).speakers, function(value, index){
             return {value: value, index: index};
           });
+       },
+
+       currenteventid: function(){
+         return Router.current().params.query.EventId;
+
+
        }
 });
 

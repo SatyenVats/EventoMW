@@ -1,104 +1,83 @@
 <template name="sponsorsios">
-  <div class="container navbar title headerstyle navbar-fixed-top">
-    <div class="col-xs-12" style="padding:14px; margin-top:2px;">
-      <span class="pull-left"> <a href="#"><img  src="img/leftarrow.png" class="img-responsive" id="gotoback" /></a></span>
-      <span class="headertext"> Sponsors </span>
-    </div>
+  {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}}
+
+  <!-- {{#contentFor "headerButtonRight"}}
+  <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+    {{> ionIcon icon='ios-plus-empty'}}
+  </button>
+  {{/contentFor}} -->
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Sponsors</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
+
+  {{#each getsponsorsbyeventid}}
+       {{> sponsorsrow}}
+     {{/each}}
+
+     {{/ionContent}}
+       <div class="tabs tabs-icon-top">
+         <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
+           <i class="icon ion-gear-a"></i>
+                Event Brief
+         </a>
+         <a class="tab-item" href="/contentios?EventId={{currenteventid}}">
+           <i class="icon ion-star"></i>
+                Content
+         </a>
+         <a class="tab-item" href="/userhome?EventId={{currenteventid}}">
+           <i class="icon ion-home"></i>
+
+         </a>
+         <a class="tab-item" href="/questionanswerios?EventId={{currenteventid}}">
+           <i class="icon ion-gear-a"></i>
+             Q & A
+         </a>
+         <a class="tab-item" href="/pollios?EventId={{currenteventid}}">
+           <i class="icon ion-gear-a"></i>
+                Poll
+         </a>
+       </div>
+     {{/ionView}}
+</template>
+
+
+<template name="sponsorsrow">
+  <div class="row">
+    <div class="col align">Platinum</div>
 
   </div>
+  <div class="row">
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+  </div>
+  <div class="row">
+    <div class="col align">Gold</div>
 
-       <div class="content-card-list" style="background-color:#000; padding-bottom:55px; padding-top:50px;">
-        <div class="row well1" style="cursor: pointer;padding:0px">
-            <!--    <div class="row well1">-->
-            <div class="col-xs-12" style="padding:20px;color:#446E8E;font-weight:bold;border-bottom:2px #EFF0F0;">Platinum</div>
-<div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
+  </div>
+  <div class="row">
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+  </div>
+  <div class="row">
+    <div class="col align">Silver</div>
 
-<!-- <hr width=100%> -->
-<div class="col-xs-12" style="padding:20px;color:#446E8E;font-weight:bold;border-bottom:2px #EFF0F0;">Gold</div>
-<hr>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <hr>
-    <div class="col-xs-12" style="padding:20px;color:#446E8E;font-weight:bold;border-bottom:2px #EFF0F0;">Silver</div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-    <div class="col-xs-3">
-        <a href="#" class="thumbnail">
-             <img src="img/53789.jpg" class="img-responsive">
-        </a>
-    </div>
-
-        </div>
-    </div>
-    <footer class="footer">
-      <div class="container">
-
-    <div class="col-xs-12" >
-
-
-    <!-- <div class="col-xs-1" style="margin-top:5px"></div>
-    <div class="col-xs-2" style="margin-top:5px;margin-left:0px;"><a href="#"><input type="image" src="img/Event_Brief.png"></a><div style="color:#B1B1B1;font-size:8px">Event Brief</div></div>
-    <div class="col-xs-2" style="margin-top:5px"><a href="#"><input type="image" src="img/contnt.png"></a><div style="color:#B1B1B1;font-size:8px">Content</div></div> -->
-    <div class="col-xs-12"><a href="#"><input type="image" src="img/Home_E.png"></a></div>
-    <!-- <div class="col-xs-2" style="margin-top:5px"><a href="#"><input type="image" src="img/Q & A.png"></a><div style="color:#B1B1B1;font-size:8px">Q & A</div></div>
-    <div class="col-xs-2" style="margin-top:5px"><a href="#"><input type="image" src="img/Green_Star.png"></a><div style="color:#B1B1B1;font-size:8px">poll</div></div>
-    <div class="col-xs-1"></div> -->
-
-
-    </div>
-
-
-
-      </div>
-    </footer>
+  </div>
+  <div class="row">
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+    <div class="col align"><img src="img/53789.jpg" width="60" height="60" class="imageborder"></div>
+  </div>
 </template>

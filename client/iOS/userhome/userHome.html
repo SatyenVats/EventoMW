@@ -1,59 +1,89 @@
 <template name="userhome">
 
-    {{#contentFor "headerButtonLeft"}}
-    <button class="button button-clear pull-left button-positive" data-ion-modal="search">
-      {{>ionNavBackButton class="button-positive" text=false}}
-    </button>
-    {{/contentFor}}
+  {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}}
 
-    <!-- {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
-      {{> ionIcon icon='ios-plus-empty'}}
-    </button>
-    {{/contentFor}} -->
+  {{#contentFor "headerButtonRight"}}
+  <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+    {{> ionIcon icon='ios-plus-empty'}}
+  </button>
+  {{/contentFor}}
 
-    {{#contentFor "headerTitle"}}
-    <h1 class="title">Menu</h1>
-    {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+  <h1 class="title">Menu</h1>
+  {{/contentFor}}
 
-    {{#ionView}}
-    {{#ionContent scroll="false"}}
+  {{#ionView}}
+  {{#ionContent scroll="true"}}
 
+  <section class="home-container">
 
-      <div class="profile-header">
-        <!-- {{> avatar user=this size="large" shape="circle"}} -->
-        <div class="avatar avatar-large avatar-circle avatar-hide-initials">
-          <img class="avatar-image" src="{{profilepath}}" width="80" height="80">
-        </div>
-
-        <h3>{{fname}} {{lname}}</h3>
-        <p>
+    <div class = "row icon-row1">
+      <div class = "col text-center">
+        <div class="profile-header">
+          <!-- {{> avatar user=this size="large" shape="circle"}} -->
+          <div class="avatar avatar-large avatar-circle avatar-hide-initials">
+            <img class="avatar-image" src="{{profilepath}}" width="80" height="80">
+          </div>
+          <h3>{{fname}} {{lname}}</h3>
+          <p>
             {{email}}
-        </p>
+          </p>
+        </div>
       </div>
-
-      <!-- @todo: ADD MENU ICONS IN A GRID HERE -->
-
-      <div class="row">
-        <div class="col col-33"><a  href="/sessionlistios?EventId={{currenteventid}}"><img src="img/events.png" class="grid-align"></a></div>
-        <div class="col col-33"><a  href="/logisticsios?EventId={{currenteventid}}"><img src="img/logistics.png" class="grid-align"></a></div>
-        <div class="col col-33"><a  href="/sponsorsios?EventId={{currenteventid}}"><img src="img/sponsors.png" class="grid-align"></a></div>
-      </div>
-      <div class="row">
-        <div class="col col-33"><a  href="/speakersios?EventId={{currenteventid}}"><img src="img/speakers.png" class="grid-align"></a></div>
-        <div class="col col-33"><a  href="/attendeesios?EventId={{currenteventid}}"><img src="img/attendees.png" class="grid-align"></a></div>
-        <div class="col col-33"><a  href="/sessionlistios?EventId={{currenteventid}}"><img src="img/dashboard.png" class="grid-align"></a></div>
-      </div>
-
-
-
-    {{/ionContent}}
-    <div class="tabs tabs-icon-top">
-      <a class="tab-item">
-        <i class="icon ion-home"></i>
-
-      </a>
     </div>
-    {{/ionView}}
 
-  </template>
+    <div class = "row icon-row">
+      <div class = "col text-center">
+        <a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/events.png" class="grid-align"></a>
+      </div>
+      <div class = "col text-center">
+        <a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/logistics.png" class="grid-align"></a>
+      </div>
+      <div class = "col text-center">
+        <a href="/sponsorsios?EventId={{currenteventid}}"><img src="img/sponsors.png" class="grid-align"></a>
+      </div>
+    </div>
+
+
+    <div class = "row icon-row">
+      <div class = "col text-center">
+        <a href="/speakersios?EventId={{currenteventid}}"><img src="img/speakers.png" class="grid-align"></a>
+      </div>
+      <div class = "col text-center">
+        <a href="/attendeesios?EventId={{currenteventid}}"><img src="img/attendees.png" class="grid-align"></a>
+      </div>
+      <div class = "col text-center">
+        <a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/dashboard.png" class="grid-align"></a>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- @todo: ADD MENU ICONS IN A GRID HERE -->
+
+        <!-- <div class="row">
+          <div class="col col-33"><a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/events.png" class="grid-align"></a></div>
+          <div class="col col-33"><a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/logistics.png" class="grid-align"></a></div>
+          <div class="col col-33"><a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/sponsors.png" class="grid-align"></a></div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/speakers.png" class="grid-align"></a></div>
+          <div class="col col-33"><a href="/attendeesios?EventId={{currenteventid}}"><img src="img/attendees.png" class="grid-align"></a></div>
+          <div class="col col-33"><a href="/sessionlistios?EventId={{currenteventid}}"><img src="img/dashboard.png" class="grid-align"></a></div>
+        </div> -->
+
+
+
+  {{/ionContent}}
+  <!-- <div class="tabs tabs-icon-top">
+    <a class="tab-item">
+      <i class="icon ion-home"></i>
+    </a>
+  </div> -->
+  {{/ionView}}
+
+</template>
