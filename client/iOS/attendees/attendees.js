@@ -5,11 +5,8 @@ attendeesbyeventid: function(){
  return	Events.findOne({_id:eid}).attendees;//{eventid:eid}
      //return	Sessions.find({eventid:eid});//{eventid:eid}
 },
-
 currenteventid: function(){
   return Router.current().params.query.EventId;
-
-
 }
 });
 

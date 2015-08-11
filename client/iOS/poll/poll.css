@@ -1,0 +1,43 @@
+.star-align{
+  text-align: center;
+  width: auto!important;
+}
+
+.need-help{
+  padding: 5px;
+  width: auto!important;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  text-align: center;
+}
+
+.feedback-tab{
+  padding: 5px;
+  width: auto!important;
+
+  border-radius: 2px;
+  background: #f7f7f7;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.submit-tab{
+  padding: 5px;
+  width: auto!important;
+  color: #FFFFFF;
+  border-radius: 2px;
+  background: #2E9AFE;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.logo-tab{
+  padding: 5px;
+  width: auto!important;
+
+  border-radius: 2px;
+
+  text-align: center;
+  padding-left: 20px;
+}

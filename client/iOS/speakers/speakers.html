@@ -61,7 +61,8 @@
 </template>
 
 <template name="spkr">
-  {{#ionSlide class="light-bg"}}
+  {{#ionSlide class="light-bg" disable-scroll="false"}}
+  <ion-scroll>
   <div class="profile-header">
     <div class="avatar avatar-large avatar-circle avatar-hide-initials">
       <img class="avatar-image" src="{{value.profilepath}}" width="80" height="80">
@@ -76,6 +77,7 @@
     <p class="attendees-des">
       {{value.details}}
     </p>
+  </ion-scroll>
   {{/ionSlide}}
 </template>
 
