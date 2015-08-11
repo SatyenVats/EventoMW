@@ -1,5 +1,8 @@
-.align{
+.sponsoes-align{
   text-align: center;
+  width: auto!important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .imageborder{

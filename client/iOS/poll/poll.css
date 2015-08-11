@@ -41,3 +41,24 @@
   text-align: center;
   padding-left: 20px;
 }
+
+.ion-home{
+  padding-top: 5px;
+  content: url('img/HomeIcon_Active.png');
+}
+.ion-brief-a{
+  padding-top: 5px;
+  content: url('img/EventBriefIcon_InActive.png');
+}
+.ion-content{
+  padding-top: 5px;
+  content: url('img/ContentIcon_InActive.png');
+}
+.ion-Q-A{
+  padding-top: 5px;
+  content: url('img/Q&AIcon_InActive.png');
+}
+.ion-poll{
+  padding-top: 5px;
+  content: url('img/PollIcon_InActive.png');
+}
