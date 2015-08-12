@@ -1,4 +1,4 @@
-/* @todo: 
+/* @todo:
 1. vertical align center not working
 2. hiding nav bar not working*/
 /*
@@ -39,6 +39,10 @@
 }
 
 .info {
-	font-family: lato; 
+	font-family: lato;
 	font-weight: bold;
+}
+
+.top-height{
+	padding-top: 40%;
 }

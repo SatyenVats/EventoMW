@@ -25,25 +25,6 @@
   {{#ionView}}
   {{#ionContent}}
 
-
-
-
-  <!-- <div class="col-md-12" style="background-color:#fff;padding:6px">
-   <input type="text" class="form-control" name="search" style="text-align:center;background-color:#E4E4E6;border-radius:4px" placeholder="Search">
-  </div> -->
-
-  <!-- <div class="row well1" style="cursor: pointer;">
-
-   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-    <div style="color:#446D8E">George Miller
-
-     <span class="pull-right"><a href="/qadetailsios?EventId={{_id}}"><img class="displayed"  src="img/right-arrow-q.png" style="height:30px" /></a></span>
-    </div>
-   </div>
-  </div> -->
-
-
-
  {{#each getspeakersbyeventid}}
     {{> qandans}}
   {{/each}}
@@ -78,20 +59,24 @@
 <template name="qandans">
   <div class="list">
 
-    <a class="item item-icon-right" href="#">
-        Question 1
+    <a class="item item-icon-right" href="/qadetailsios?EventId={{currenteventid}}">
+        Change George Miller to Amit Singal
       <i class="icon ion-chevron-right"></i>
     </a>
-    <a class="item item-icon-right" href="#">
-        Question 1
+    <a class="item item-icon-right" href="/qadetailsios?EventId={{currenteventid}}">
+        Change George Miller to Satyen Vats
       <i class="icon ion-chevron-right"></i>
     </a>
-    <a class="item item-icon-right" href="#">
-        Question 1
+    <a class="item item-icon-right" href="/qadetailsios?EventId={{currenteventid}}">
+        Change George Miller to Atul Satija
       <i class="icon ion-chevron-right"></i>
     </a>
-    <a class="item item-icon-right" href="#">
-        Question 1
+    <a class="item item-icon-right" href="/qadetailsios?EventId={{currenteventid}}">
+        Change George Miller to Pranav Kumar
+      <i class="icon ion-chevron-right"></i>
+    </a>
+    <a class="item item-icon-right" href="/qadetailsios?EventId={{currenteventid}}">
+        Change George Miller to Chanakya Narra
       <i class="icon ion-chevron-right"></i>
     </a>
   </div>

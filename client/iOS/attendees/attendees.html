@@ -19,15 +19,15 @@
   {{/contentFor}} -->
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Evento</h1>
+    <h1 class="title">Attendees</h1>
   {{/contentFor}}
 
   {{#ionView}}
   {{#ionContent}}
 
-    {{#each attendeesbyeventid}}
+    <!-- {{#each attendeesbyeventid}} -->
       {{> attendIos}}
-    {{/each}}
+    <!-- {{/each}} -->
 
     {{/ionContent}}
     <div class="tabs tabs-icon-top">
@@ -59,10 +59,50 @@
 <template name="attendIos">
   <div class="list">
 
-    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+    <!-- <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
       <img src="{{profilepath}}">
       <h2 class="textleft">{{fname}} {{lname}}</h2>
       <p class="textleft">{{email}}</p>
+    </a> -->
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Arvind Kochhar</h2>
+      <p class="textleft">CEO, Esquare Consulting </p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Jaideep Mehta</h2>
+      <p class="textleft">MD, IDC</p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Mahesh Natarajan</h2>
+      <p class="textleft">VP, Thermofisher</p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Pranav Kumar</h2>
+      <p class="textleft">CEO, PlusCapital</p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Rajiv Gupta</h2>
+      <p class="textleft">MD, TCG Hamilton</p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Chanakya Narra</h2>
+      <p class="textleft">CEO, Comprobase</p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Rajan Jayaram</h2>
+      <p class="textleft">Head Philips India MRI division </p>
+    </a>
+    <a class="item item-thumbnail-left" href="/attendeesdetails?EventId={{currenteventid}}&Email={{email}}">
+      <img src="img/profile-pic.png">
+      <h2 class="textleft">Vijay TS</h2>
+      <p class="textleft">Board Member India, DuPont </p>
     </a>
 
 </div>

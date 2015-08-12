@@ -1,89 +1,89 @@
 <template name="qadetailsios">
 
- <div class="container navbar title headerstyle navbar-fixed-top">
+  <!-- {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}} -->
 
-  <div class="col-xs-12" style="padding:14px; margin-top:2px;">
-   <span class="pull-left"> <a href="/userHome"><img  src="img/leftarrow.png" class="img-responsive" /></a></span>
-   <span class="headertext"> Geroge Miler </span>
- </div>
+  {{#contentFor "headerButtonLeft"}}
+  <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+    <!-- {{> ionIcon icon='ios-search'}} -->
+    {{>ionNavBackButton class="button-positive" text=false}}
+  </button>
+  {{/contentFor}}
 
+  <!-- {{#contentFor "headerButtonRight"}}
+  <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+    {{> ionIcon icon='ios-plus-empty'}}
+  </button>
+  {{/contentFor}} -->
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Question & Answers</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
+
+  <div class="button-bar bar-positive top-ht">
+  <a class="button">Questions</a>
+  <a class="button">Answers</a>
 </div>
 
-<div class="content-card-list" style="padding-bottom:55px; padding-top:50px;">
+  {{#each getsquestionanswerbyeventid}}
+     {{> qandansdetails}}
+   {{/each}}
+   {{/ionContent}}
 
+   <div class="tabs tabs-icon-top">
+     <a class="tab-item" href="/eventbrief?EventId={{currenteventid}}">
+       <i class="icon ion-brief-a"></i>
+            <!-- Event Brief -->
+     </a>
+     <a class="tab-item" href="/contentios?EventId={{currenteventid}}">
+       <i class="icon ion-content"></i>
+            <!-- Content -->
+     </a>
+     <a class="tab-item" href="/userhome?EventId={{currenteventid}}">
+       <i class="icon ion-home"></i>
 
-<div class="row well1" style="background-color:#F9F8F8">
-  <div class="col-xs-12" style="padding:0px">
+     </a>
+     <a class="tab-item" href="/questionanswerios?EventId={{currenteventid}}">
+       <i class="icon ion-Q-A"></i>
+         <!-- Q & A -->
+     </a>
+     <a class="tab-item" href="/pollios?EventId={{currenteventid}}">
+       <i class="icon ion-poll"></i>
+            <!-- Poll -->
+     </a>
+   </div>
+   {{/ionView}}
 
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary btn-color active btn-default" style="background-color:#3DA1E4" >Questions</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary btn-color btn-default" >Answers</button>
-      </div>
-    </div>
-</div>
+</template>
 
+<template name="qandansdetails">
+  <div class="list">
+
+    <a class="item item-icon-right" href="#">
+        Change George Miller to Amit Singal
+
+    </a>
+    <a class="item item-icon-right" href="#">
+        Change George Miller to Satyen Vats
+
+    </a>
+    <a class="item item-icon-right" href="#">
+        Change George Miller to Atul Satija
+
+    </a>
+    <a class="item item-icon-right" href="#">
+        Change George Miller to Pranav Kumar
+
+    </a>
+    <a class="item item-icon-right" href="#">
+        Change George Miller to Chanakya Narra
+
+    </a>
   </div>
-
-  <div class="row well1" style="cursor: pointer;">
-
-   <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-    <div style="color:#446D8E">George Miller
-
-
-    </div>
-  </div>
-</div>
-
-<div class="row well1" style="cursor: pointer;">
- <!--    <div class="row well1">-->
-
- <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-  <div style="color:#446D8E">Bradern Miller
-
-
-  </div>
-</div>
-</div>
-<div class="row well1" style="cursor: pointer;">
-
- <div class="col-md-12" style="text-align:left;margin-top: 10px;margin-bottom: 10px;">
-  <div style="color:#446D8E">XYZ Content
-
-
-  </div>
-</div>
-</div>
-<div class="row well1" style="cursor: pointer;">
- <div class="col-md-12" style="text-align:left;margin-top:10px;margin-bottom:10px;">
-  <div style="color:#446D8E">XYZ Content
-
-  </div>
-</div>
-</div>
-
-</div>
-<footer class="footer">
-  <div class="container">
-
-<div class="col-xs-12">
-
-
-
-<div class="col-xs-2" style="margin-top:5px;margin-left:0px;"><a href="#"><input type="image" src="img/Event_Brief.png"></a><div style="color:#B1B1B1;font-size:6px">Event Brief</div></div>
-<div class="col-xs-3" style="margin-top:5px"><a href="#"><input type="image" src="img/contnt.png"></a><div style="color:#B1B1B1;font-size:8px">Content</div></div>
-<div class="col-xs-2"><a href="#"><input type="image" src="img/Home_E.png"></a></div>
-<div class="col-xs-3" style="margin-top:5px"><a href="#"><input type="image" src="img/Q & A.png"></a><div style="color:#B1B1B1;font-size:8px">Q & A</div></div>
-<div class="col-xs-2" style="margin-top:5px"><a href="#"><input type="image" src="img/Green_Star.png"></a><div style="color:#B1B1B1;font-size:8px">poll</div></div>
-
-
-
-</div>
-
-
-
-  </div>
-</footer>
 </template>

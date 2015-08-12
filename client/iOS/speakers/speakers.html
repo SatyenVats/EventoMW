@@ -20,9 +20,9 @@
 
   {{#ionSlideBox}}
     <!-- {{#ionSlide class="light-bg"}} -->
-    {{#each getspeakersbyeventid}}
+    <!-- {{#each getspeakersbyeventid}} -->
          {{> spkr}}
-       {{/each}}
+       <!-- {{/each}} -->
 
     <!-- {{/ionSlide}} -->
      <!-- {{#ionSlide class="light-bg"}}
@@ -65,17 +65,25 @@
   <ion-scroll>
   <div class="profile-header">
     <div class="avatar avatar-large avatar-circle avatar-hide-initials">
-      <img class="avatar-image" src="{{value.profilepath}}" width="80" height="80">
+      <!-- <img class="avatar-image" src="{{value.profilepath}}" width="80" height="80"> -->
+      <img class="avatar-image" src="img/profile-pic.png" width="80" height="80">
     </div>
 
-    <h3>{{value.fname}} {{value.lname}}</h3>
+    <h3>
+      <!-- {{value.fname}} {{value.lname}} -->
+      Atul Satija
+    </h3>
     <p>
-        {{value.email}}
+        <!-- {{value.email}} -->
+        Founder & CEO of The Nudge Foundation
     </p>
   </div>
 
     <p class="attendees-des">
-      {{value.details}}
+      <!-- {{value.details}} -->
+      Atul is the Founder & CEO of “The Nudge Foundation” recently started in June 2015 and is the Chief Business Advisor for inmobi.
+Before that Atul was the Chief Revenue Officer for inmobi. Atul was instrumental in shaping the mobile strategy for Google in the capacity of Head of Mobile Business for Japan & Asia-Pacific. Atul is a visionary and leader in the space of mobile and is forged his way to benefit the under privileged through End Poverty NGO. Atul is an alumni of ISB and holds a B.Tech from NIT,
+​ ​Kurukshetra.
     </p>
   </ion-scroll>
   {{/ionSlide}}
